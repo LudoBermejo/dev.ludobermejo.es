@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            dev.ludobermejo.es
+tagline:          A development blog
+description:      "This is a dev blog, based on the wonderful theme from karlo espiritu, blackdoc (https://github.com/karloespiritu/blackdoc)"
+url:              https://github.com/karloespiritu/blackdoc
+baseurl:          /
+
+author:
+  name:           'Ludo Bermejo'
+  url:            https://twitter.com/ludobermejo
+
+paginate:         5
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/LudoBermejo/dev.ludobermejo.es
