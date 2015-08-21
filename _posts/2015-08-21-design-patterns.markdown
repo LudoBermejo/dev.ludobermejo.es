@@ -4,7 +4,7 @@ title:  "Design patterns"
 date:   2015-08-21 14:30:00
 author: Ludo Bermejo
 categories: Patterns 
-tags:	jekyll welcome 
+tags:	patterns 
 cover:  "assets/instacode.png"
 ---
 
