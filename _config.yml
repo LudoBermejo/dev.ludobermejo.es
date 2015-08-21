@@ -1,26 +1,180 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+# External gems
+gems:
+  - jekyll-archives # Sorry, not GitHub pages friendly!
+  - jekyll-sitemap
 
-# Permalinks
-permalink:        pretty
-relative_permalinks: true
+# Site settings
+title: dev.ludobermejo.es
+subtitle: "A development blog from Ludo Bermejo"
+email: LudoBermejo@gmail.com
+name: Ludo Bermejo
+description: > 
+  A development blog from Ludo Bermejo
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "http://dev.ludobermejo.es" # the base hostname & protocol for your site
+cover: "assets/header_image.gif"
+logo: "assets/logo.png"
 
-# Setup
-title:            dev.ludobermejo.es
-tagline:          A development blog
-description:      "This is a dev blog, based on the wonderful theme from karlo espiritu, blackdoc (https://github.com/karloespiritu/blackdoc)"
-url:              https://github.com/karloespiritu/blackdoc
-baseurl:          /
+# Build settings
+markdown: kramdown
+paginate: 5
+paginate_path: "/page:num/"
 
-author:
-  name:           'Ludo Bermejo'
-  url:            https://twitter.com/ludobermejo
+# Archive settings (see https://github.com/jekyll/jekyll-archives/)
+jekyll-archives: 
+  enabled: 
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
 
-paginate:         5
+# Disqus comments
+disqus_shortname: bencentra
 
-# Custom vars
-version:          1.0.0
+# Google analytics
+# ga_tracking_id: "UA-XXXX-1"
 
-github:
-  repo:           https://github.com/LudoBermejo/dev.ludobermejo.es
+# Category descriptions (for archive pages)
+descriptions:
+  - cat: patterns
+    desc: "Posts describing design pattern techniques."
+
+  - cat: javascript
+    desc: "Post associated with javascript."
+
+# Social icons and sharing options
+#
+# Social settings are used in two places:
+# * In the footer, as links to your personal profiles
+# * After each blog post for sharing widgets
+# 
+# Example:
+# 
+# social:
+#   - name: Twitter                         # Name of the service
+#     icon: twitter                         # Font Awesome icon to use (minus fa- prefix)
+#     username: "@TheBenCentra"             # (User) Name to display in the footer link
+#     url: https://twitter.com/TheBenCentra # URL of your profile (leave blank to not display in footer)
+#     desc: Follow me on Twitter            # Description to display as link title, etc
+#     share_url: http://twitter.com/share   # URL for sharing to the service (leave blank to not allow sharing)
+#     share_title: ?text=                   # Title parameter for sharing URL
+#     share_link: "&amp;url="               # Link parameter for sharing URL
+social:
+  - name: Twitter
+    icon: twitter
+    username: "@Ludobermejo"
+    url: https://twitter.com/LudoBermejo
+    desc: Follow me on Twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
+
+  - name: Facebook
+    icon: facebook
+    username: ludobermejo
+    url: 
+    desc: Friend me on Facebook
+    share_url: //www.facebook.com/sharer.php
+    share_title: ?t=
+    share_link: "&amp;u="
+
+  - name: GitHub
+    icon: github
+    username: ludobermejo
+    url: https://github.com/ludobermejo
+    desc: Fork me on GitHub
+    share_url:
+    share_title:
+    share_link:
+
+  - name: LinkedIn
+    icon: linkedin
+    username: Ben Centra
+    url: https://linkedin.com/in/ludobermejo
+    desc: Connect with me on LinkedIn
+    share_url: //www.linkedin.com/shareArticle
+    share_title: ?mini=true
+    share_link: "&amp;url="
+
+  - name: Google+
+    icon: google-plus
+    username: ludobermejo
+    url: https://plus.google.com/+LudoBermejo/posts
+    desc: Add me to your Circles
+    share_url: //plus.google.com/share
+    share_title: ?title=
+    share_link: "&amp;url="
+
+  - name: YouTube
+    icon: youtube
+    username: 
+    url: 
+    desc: Subscribe on YouTube
+    share_url: 
+    share_title: 
+    share_link:
+
+  - name: Instagram
+    icon: instagram
+    username: 
+    url: 
+    desc: Follow me on Instagram
+    share_url: 
+    share_title: 
+    share_link:
+
+  - name: Pinterest
+    icon: pinterest
+    username: 
+    url: 
+    desc: Follow me on Pinterest
+    share_url: 
+    share_title: 
+    share_link:
+
+  - name: SoundCloud
+    icon: soundcloud
+    username: 
+    url: 
+    desc: Follow me on SoundCloud
+    share_url: 
+    share_title: 
+    share_link:
+
+  - name: Tumblr
+    icon: tumblr
+    username: 
+    url: 
+    desc: Follow me on Tumblr
+    share_url: 
+    share_title: 
+    share_link:
+
+  - name: Steam
+    icon: steam
+    username: 
+    url: 
+    desc: Friend me on Steam
+    share_url: 
+    share_title: 
+    share_link:
+
+  - name: Dribbble
+    icon: dribbble
+    username: 
+    url: 
+    desc: Follow me on Dribble
+
+  - name: Vimeo
+    icon: vimeo-square
+    username: 
+    url: 
+    desc: Follow me on Vimeo
+
+  - name: Vine
+    icon: vine
+    username: 
+    url: 
+    desc: Follow me on Vine

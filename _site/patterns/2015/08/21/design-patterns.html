@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Design patterns</title>
+  <meta name="description" content="The idea of design patterns (applying patterns to programming) was presented in the late 80’s and get strength in the late 90’s, at least in the c++ world. I...">
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+	<link rel="manifest" href="/assets/icons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://dev.ludobermejo.es//patterns/2015/08/21/design-patterns.html">
+  <link rel="alternate" type="application/rss+xml" title="dev.ludobermejo.es" href="http://dev.ludobermejo.es//feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+    	
+      <img src="/assets/logo.png" alt="dev.ludobermejo.es">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+    	<i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+      	
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/posts/">Posts</a>
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container has-cover" style="background-image: url(/assets/instacode.png);">
+	<div class="scrim has-cover">
+		<header class="post-header">
+		  <h1 class="title">Design patterns</h1>
+		  <p class="info">by <strong>Ludo Bermejo</strong></p>
+		</header>
+	</div>
+</div>
+
+<div class="wrapper">
+
+
+
+<section class="post-meta">
+	<div class="post-date">August 21, 2015</div>
+	<div class="post-categories">
+	in 
+	  
+		<a href="/category/patterns">Patterns</a>
+	  
+	
+	</div>
+</section>	
+
+<article class="post-content">
+  <p>The idea of design patterns (applying patterns to programming) was presented in the late 80’s and get strength in the late 90’s, at least in the c++ world. I remember reading about it in my third company. My first thought was: “oh, men, no way, not another idiots telling me what I have to do”.</p>
+
+<p>Yeah, you know. Youth.</p>
+
+<p>The thing is that the design patterns idea was old when the first MVC came to internet. There are hundreds of patterns (and some of them validate the idea of “WTF are you doing, buddy?”) and in the last years internet developers are taking more and more of them to use in their crappy apps.</p>
+
+<p>But, what is a design pattern? Well, remember that experiment about <a href="https://www.youtube.com/watch?v=B7cw_9AT5hg">the water and the rook</a>? Well, now imagine every developer looking for water, and getting the same conclusion. Wouldn’t it be nice just to apply the same formula from the start?</p>
+
+<p>Now you got it. <code>Design patterns</code> are just a solution that we can reuse, and that can be applied to a usual problem. A software problem, in this specific case.</p>
+
+<p>So, you can think? “Ey, there are multiple ways to do the things. What if I found a better solution?”. Then my answer is “Ok, good for you. Now could you be so nice to publish your solution so everyone can learn from you?”</p>
+
+<p>Again, you got it. Design patterns are the effort of a bunch of developers that want to make the world (the development world) better. And there are some benefits of using them, like:</p>
+
+<ul>
+  <li>They provide solid solutions to common issues.</li>
+  <li>They can be used in any project (more or less, we’ll discuss it later)</li>
+  <li>They can be readapted</li>
+  <li>They are ‘live’, so they can be improved over time</li>
+  <li>They are time saving memes. You don’t need to rediscover fire when you just want to boil your potatoes</li>
+  <li>The solve bugs. Just because they are standardized.</li>
+  <li>Other developers will not have to understand your code. Because is a generical, functional, documented and maybe already used solution.</li>
+</ul>
+
+<p>They look good, right? Now you can say: “Ok, convinced. Now why the fuck are developers that doesn’t want to understand this?”. Well, I’ll be hones. That’s because… well, how can I say it?</p>
+
+<p>Because some of them are fucking difficult to understand.</p>
+
+<p>Every developer has a dead-end and some of them doesn’t have time to learn every tool they need. Now some of them have kids, family, life, and they don’t want to waste ever more time in learning more tools for the work. It’s difficult, it can be frustrating, it will bring the “slow” to your apps at first…</p>
+
+<p>Now that’s why. But remember: you are a developer. You need to improve. My first job was make a old-fashion-form-add-edit-delete app. I made one hundred forms for it. Then I make a autogenerated app by using text files (no JSON or XML on this days, fellows). And I feel good. And I could take some holidays. My work wasn’t perfect, but we only have to change it in one file and everything was changed.</p>
+
+<p>Yeah, that where the old times. But remember: dark ages comes after Rome. Enough said.</p>
+
+<p>So, in the next months I will talk about design patterns in Javascript. It will be interesting, tedious, boring and wonderful. And it will be <code>useful</code> for all you you. And that’s the matter.</p>
+
+<p>You are a developer and you will learn until you die.</p>
+
+<p>Or become a bussiness analyst.</p>
+
+<p>Your choice.</p>
+
+</article>
+
+
+
+<section class="tags">
+	<strong>Tags:</strong> <a href="/tag/jekyll">jekyll</a>,&nbsp;<a href="/tag/welcome">welcome</a>
+</section>
+
+
+
+<section class="rss">
+	<p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+      <a href="http://twitter.com/share?text=Design+patterns&amp;url=http://dev.ludobermejo.es/patterns/2015/08/21/design-patterns.html"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+  
+    
+      <a href="//www.facebook.com/sharer.php?t=Design+patterns&amp;u=http://dev.ludobermejo.es/patterns/2015/08/21/design-patterns.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+  
+    
+  
+    
+      <a href="//www.linkedin.com/shareArticle?mini=trueDesign+patterns&amp;url=http://dev.ludobermejo.es/patterns/2015/08/21/design-patterns.html"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-linkedin-square fa-lg"></i>
+      </a>
+    
+  
+    
+      <a href="//plus.google.com/share?title=Design+patterns&amp;url=http://dev.ludobermejo.es/patterns/2015/08/21/design-patterns.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</section>
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'bencentra';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">dev.ludobermejo.es</h3>
+
+    <div class="site-navigation">
+    	
+    	<p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/posts/">Posts</a>
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+    	<p><strong>Contact</strong>
+      <ul class="social-media-list">
+      	<li>
+      		<a href="mailto:LudoBermejo@gmail.com">
+	      		<i class="fa fa-envelope-o"></i>
+	      		<span class="username">LudoBermejo@gmail.com</span>
+      		</a>
+      	</li>
+
+      	
+      	
+      	<li>
+          <a href="https://twitter.com/LudoBermejo" title="Follow me on Twitter">
+            <i class="fa fa-twitter"></i>
+            <span class="username">@Ludobermejo</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	
+      	
+      	<li>
+          <a href="https://github.com/ludobermejo" title="Fork me on GitHub">
+            <i class="fa fa-github"></i>
+            <span class="username">ludobermejo</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	<li>
+          <a href="https://linkedin.com/in/ludobermejo" title="Connect with me on LinkedIn">
+            <i class="fa fa-linkedin"></i>
+            <span class="username">Ben Centra</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	<li>
+          <a href="https://plus.google.com/+LudoBermejo/posts" title="Add me to your Circles">
+            <i class="fa fa-google-plus"></i>
+            <span class="username">ludobermejo</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+    	<p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">A development blog from Ludo Bermejo
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+	// Syntax highlighting
+	hljs.initHighlightingOnLoad();
+
+	// Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+
+
+  </body>
+
+</html>
