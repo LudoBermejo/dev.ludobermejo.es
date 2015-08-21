@@ -2,181 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34954462-7a9b-4f21-8cd5-4bb310379450" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/android-icon-144x144.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/android-icon-192x192.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/android-icon-36x36.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/android-icon-48x48.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/android-icon-72x72.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/android-icon-96x96.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/apple-icon-114x114.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/apple-icon-120x120.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/apple-icon-144x144.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/apple-icon-152x152.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/apple-icon-180x180.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/apple-icon-57x57.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/apple-icon-60x60.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/apple-icon-72x72.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/apple-icon-76x76.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/apple-icon-precomposed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/apple-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/favicon-16x16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/favicon-32x32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/favicon-96x96.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/header_image.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/header_image.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/instacode.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/ms-icon-144x144.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/ms-icon-150x150.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/ms-icon-310x310.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/ms-icon-70x70.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/profile-placeholder.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2015-08-21-design-patterns.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_animation.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_appearance.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/settings/_asset-pipeline.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_assign-inputs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_backface-visibility.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_background-image.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_background.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/base/_base.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_border-color.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_border-image.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_border-radius.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_border-style.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_border-width.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/_bourbon-deprecated-upcoming.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/_bourbon.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_box-sizing.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/base/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_calc.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_clearfix.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_columns.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_contains-falsy.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_contains.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_convert-units.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_direction-context.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_directional-values.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/settings/_disable-warnings.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_display-context.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_ellipsis.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_fill-parent.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_filter.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_flex-box.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_font-face.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_font-feature-settings.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_font-source-declaration.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_font-stacks.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/base/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_gradient-positions-parser.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/base/_grid-settings.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/settings/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_hide-text.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_hidpi-media-query.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_hyphens.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_image-rendering.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_is-length.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_is-light.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_is-number.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_is-size.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_keyframes.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/_layout.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_linear-angle-parser.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_linear-gradient-parser.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_linear-gradient.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_linear-positions-parser.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_linear-side-corner-parser.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/base/_lists.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_margin.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_media.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_modular-scale.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/_neat-helpers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/_neat.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/functions/_new-breakpoint.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_omega.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_outer-container.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_pad.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_padding.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_perspective.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_placeholder.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_position.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_prefixer.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/settings/_prefixer.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/functions/_private.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_private.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_px-to-em.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/settings/_px-to-em.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_px-to-rem.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_radial-arg-parser.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_radial-gradient-parser.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_radial-gradient.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_radial-positions-parser.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_render-gradients.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_retina-image.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_row.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_selection.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_shade.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_shape-size-stripper.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_shift.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_size.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_span-columns.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/helpers/_str-to-num.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_strip-units.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/base/_tables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_text-decoration.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_text-inputs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_timing-functions.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_tint.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_to-deprecate.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_transform.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_transition-property-name.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_transition.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_triangle.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/base/_typography.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/functions/_unpack.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/css3/_user-select.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/base/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/grid/_visual-grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/neat/settings/_visual-grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/bourbon/addons/_word-wrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_layouts/archive.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/browserconfig.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/header.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/main.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/icons/manifest.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/page_divider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.sass-cache/5ca70f5f1eb15d5ede5f40b9ec8f133cb39468d6/_base.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.sass-cache/5ca70f5f1eb15d5ede5f40b9ec8f133cb39468d6/_layout.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.sass-cache/5ca70f5f1eb15d5ede5f40b9ec8f133cb39468d6/_syntax-highlighting.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/sidebar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2012-02-06-whats-jekyll.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2012-02-07-example-content.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2015-05-14-introducing-blackdoc.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/atom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/blackdoc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/dev.ludobermejo.es.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/poole.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/syntax.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/blackdoc-screenshot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/reverse-screenshot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles.md" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE.md" afterPath="$PROJECT_DIR$/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about.md" afterPath="$PROJECT_DIR$/about.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/head.html" afterPath="$PROJECT_DIR$/_includes/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/page.html" afterPath="$PROJECT_DIR$/_layouts/page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/post.html" afterPath="$PROJECT_DIR$/_layouts/post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/patterns/2015/08/21/design-patterns.html" afterPath="$PROJECT_DIR$/_site/patterns/2015/08/21/design-patterns.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dev.ludobermejo.es.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -201,8 +30,8 @@
       <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.41884816">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -244,7 +73,17 @@
       <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.5416667">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/head.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="5.25">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -274,8 +113,8 @@
       <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -284,18 +123,8 @@
       <file leaf-file-name="post.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="19.166666">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="23.541666">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.375">
+              <caret line="59" column="16" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -574,25 +403,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="19.166666">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="23.541666">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.5416667">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -636,23 +449,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/header_image.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.25">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.375">
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.41884816">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
