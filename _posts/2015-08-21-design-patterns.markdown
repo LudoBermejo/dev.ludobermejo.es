@@ -44,6 +44,6 @@ So, in the next months I will talk about design patterns in Javascript. It will 
 
 You are a developer and you will learn until you die. 
 
-Or become a bussiness analyst.
+Or become a "I'm good as I am" amigo.
 
 Your choice.
