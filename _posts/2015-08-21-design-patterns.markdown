@@ -26,7 +26,6 @@ Now, how can we add some props to a created object? Let's check some ways:
     houseOfGameOfThrones.name = "Baratheon"; // we assign a property called name
     console.log(houseOfGameOfThrones.name); // this is one way to access the property
     
-    
     // Second way
     houseOfGameOfThrones["numberOfDeathsInBooks"] = "About five";
     console.log(houseOfGameOfThrones["numberOfDeathsInBooks"]); // this is another way to access the property
@@ -46,7 +45,6 @@ Now, how can we add some props to a created object? Let's check some ways:
                 value: "Who nows",
                 writable: true
             },
-            
              "previousLeader": {
                 value: "Rober Barateon",
                 writable: false
