@@ -1,12 +1,13 @@
 ---
 layout: post
 title:  "Creational pattern"
-date:   2015-08-21 14:30:00
+date:   2015-09-01 18:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
 cover:  "assets/houseOfThrones.jpg"
 ---
+
 
 The idea of design patterns (applying patterns to programming) was presented in the late 80's and get strength in the late 90's, at least in the c++ world. I remember reading about it in my third company. My first thought was: "oh, men, no way, not another idiots telling me what I have to do".
  

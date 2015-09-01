@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Creational pattern"
-date:   2015-09-01 08:30:00
+title:  "Design patterns"
+date:   2015-08-21 14:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 

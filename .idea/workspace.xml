@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34954462-7a9b-4f21-8cd5-4bb310379450" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2015-08-21-design-patterns.markdown" afterPath="$PROJECT_DIR$/_posts/2015-08-21-design-patterns.markdown" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2015-09-01-creational-pattern.markdown" afterPath="$PROJECT_DIR$/_posts/2015-09-01-creational-pattern.markdown" />
     </list>
     <ignored path="dev.ludobermejo.es.iws" />
@@ -63,8 +64,8 @@
       <file leaf-file-name="2015-08-21-design-patterns.markdown" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2015-08-21-design-patterns.markdown">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.758621">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.862069">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,8 +102,8 @@
       <file leaf-file-name="2015-09-01-creational-pattern.markdown" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2015-09-01-creational-pattern.markdown">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.033663366">
-              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.15148515">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -168,8 +169,8 @@
         <option value="$PROJECT_DIR$/public/css/dev.ludobermejo.es.css" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/about.md" />
-        <option value="$PROJECT_DIR$/_posts/2015-08-21-design-patterns.markdown" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/_posts/2015-08-21-design-patterns.markdown" />
         <option value="$PROJECT_DIR$/_posts/2015-09-01-creational-pattern.markdown" />
       </list>
     </option>
@@ -755,8 +756,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2015-08-21-design-patterns.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.758621">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.862069">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -772,8 +773,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2015-09-01-creational-pattern.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.033663366">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.15148515">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
