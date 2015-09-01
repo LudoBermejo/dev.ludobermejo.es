@@ -55,4 +55,4 @@ Ok, Tolkien knew it. The Wizard are your famous ninjas. They are wonderful, they
 
 "What do you mean it's done?"
 
-They are quick. What am I saying? They are the mother-fucking-flash. They knew all the hacks, 
+They are quick. What am I saying? They are the mother-fucking-flash. They knew all the hacks, all the shortcuts, they used undocumented, deprecated functions. Whatever they need. Of course the code they left behind is a mess. But ey, it's finished and, what are you talking about "fix it"? If it's done, it's done. If work, you don't touch it.
