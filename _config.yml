@@ -44,6 +44,12 @@ descriptions:
   - cat: javascript
     desc: "Post associated with javascript."
 
+  - cat: teams
+    desc: "Posts about team building."
+
+  - cat: theorical
+    desc: "Theorical stuff aka known as 'wtf are you talking about'."
+
 # Social icons and sharing options
 #
 # Social settings are used in two places:
