@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "You don't need rockstars or ninjas. Introducing the D&D team-party."
-date:   2015-09-10 18:30:00
+date:   2015-09-3 18:30:00
 author: Ludo Bermejo
 categories: Teams 
 tags:	teams theorical 
@@ -10,11 +10,11 @@ cover:  "assets/dandd.jpg"
 
 All of us have tripped over the same stone one or twice. Maybe you are looking for a job, maybe you need to hire a developer to make your website. You check Linkedin, personal blogs, github pages. They are everywhere: "Ninjas", "Rockstars", "Gurus", "Full stack developers". Every year we change the term so it doesn't get too oldish. But, `what do this words mean`? 
 
-Well, initially it was just another way to name the `experts`. But you know how weird is this little world of us: we are fashion victims. We love to invent new words to make us special, to distinguish ourselves from the others. Soon enough the headhunters were looking first for gurus, then ninjas, after that rockstars, now "fullstackers". Pick your poison. These marvellous words explodes in our minds, like, "oh, this guys are so brilliant. They know the tech, they collaborate with it, they are famous. Let's make a team with rockstars-ninjas-fully-gurus; we will be unstoppable". 
+Well, initially they were just another way to name the `experts`. But you know how weird is this little world of us: we are fashion victims. We love to invent new words to make us special, to distinguish ourselves from the others. Soon enough the headhunters were looking first for gurus, then ninjas or rockstars, now "fullstackers". Pick your poison. These marvellous words explodes in our minds, like, "oh, this guys are so brilliant. They know the tech, they collaborate with it, they are famous. Let's make a team with rockstars-ninjas-fully-gurus; we will be unstoppable". 
 
 Well... no, it will be a mess.
 
-Let me explain it: I've spend some years living with development teams and I don't like the concept of `full experts team`. Don't make me wrong; I mean, I love experts, those guys can achieve whatever they want. But they have problems, too. Of course I'm oversimplifying things but, you know, maybe "ninja" is a oversimplified way to name professionals. 
+Let me explain myself: I spent some years breathing with development teams and I don't like the concept of `full experts team`. Don't make me wrong: I love experts, those guys can achieve impressive things. But they have problems, too. Of course I'm oversimplifying here, but maybe "ninja" is a oversimplified way to name professionals. 
   
 ## So, you don't like the fullstackmotherfockersofhells teams. Then, what's your idea for an ideal team?
 
@@ -54,7 +54,7 @@ Maybe you never found them before, but they exist, like the holy grail of teams.
 
 ### The paladin
 
-They are natural-born leaders, or maybe self-made leaders. They can convince people to follow their lead into hell. They distruct bosses because, you know, what would they  know about real problems and working on them? Of course they can be wrong, and they maybe lead the team to the cliff. And they spend so much time yelling and shouting and fighing for what is right for the good cause. But ey, the team respects every word they say. And that's a thing.  
+They are natural-born leaders, or maybe self-made leaders. They convince people to follow their lead into hell. They distrust bosses because, you know, what would they know about real problems and working on them? Of course they can be wrong, and they maybe drive the team into the cliff. And they spend so much time yelling and shouting and fighing for what is right for the good cause. But the team respects every word they say. And that's a thing.  
 
 ### The bard
 
