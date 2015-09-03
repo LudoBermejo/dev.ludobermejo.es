@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "You don't need rockstars or ninjas. Introducing the D&D team-party."
+title:  "You don't need rockstars or ninjas. Introducing the D&D team."
 date:   2015-09-3 18:30:00
 author: Ludo Bermejo
 categories: Teams 
