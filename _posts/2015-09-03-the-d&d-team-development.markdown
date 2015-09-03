@@ -18,7 +18,7 @@ Let me explain myself: I spent some years breathing with development teams and I
   
 ## So, you don't like the fullstackmotherfockersofhells teams. Then, what's your idea for an ideal team?
 
-Well... I'm glad you asked. Please, allow me to be your `nerdist host in this wonderful trip to the geeky side of the development world`. Let me present you the:
+Well... I'm glad you asked. Please, allow me to be your `nerdist host in this wonderful trip to the geeky side of the development world.` Let me present you the:
 
 # D&D(tm) Team-party crappy theory
 
