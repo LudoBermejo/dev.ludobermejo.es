@@ -5,8 +5,7 @@ date:   2015-09-10 18:30:00
 author: Ludo Bermejo
 categories: Teams 
 tags:	teams theorical 
-published:false
-cover:  "assets/houseOfThrones.jpg"
+cover:  "assets/dandd.jpg"
 ---
 
 All of us have tripped over the same stone one or twice. Maybe you are looking for a job, maybe you need to hire a developer to make your website. You check Linkedin, personal blogs, github pages. They are everywhere: "Ninjas", "Rockstars", "Gurus", "Full stack developers". Every year we change the term so it doesn't get too oldish. But, `what do this words mean`? 
