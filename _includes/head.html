@@ -61,7 +61,7 @@
 	<meta content="{{ site.url }}/about/" property="article:author">
 	{% endif %}
 	{% if page.cover %}
-	<meta content="{{  page.cover | prepend: site.baseurl }}" property="og:image">
+	<meta content="{{ site.url }}{{  page.cover }}" property="og:image">
 	{% else %}
 	<meta content="/img/logo-high-resolution.png" property="og:image">
 	{% endif %}
