@@ -42,7 +42,7 @@ Maybe they are not the best coders in the world. Maybe they doesn't read every f
 
 Ok, Tolkien knew it. The Wizard are your famous ninjas. They are wonderful, they know lots of things, they have the most beautiful code you ever seen. But they are proud and their frustration tolerance is almost zero. They spend too much time making things perfect, they can be patronizing. You know them: cool and insufferable.
 
-### The thief
+### The rogue
 
 "What do you mean it's done?"
 
