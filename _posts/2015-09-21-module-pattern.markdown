@@ -8,7 +8,7 @@ tags:	patterns
 cover:  "assets/discWorld.jpg"
 ---
 
-This is possible the most famous design pattern between javascript developers and it's used in every framework we found every week. Most of us has used this pattern even without knowing it, just by copying another example of "how to do a todo list" (tm)
+This is possible the most famous design pattern between javascript developers and it's used in every framework we create every week. Most of us has used this pattern even without knowing it, just by copying another example of "how to do a todo list" (tm)
 
 But it is so useful, really? Well, maybe fifteen years ago it was a little too overcomplicated. But right now, with all the stuff we have (javascript clients, javascript servers, javascripts webapps, javascript soloapps, etc), I think it's the most easy way to keep your app in line. Unless you wanna make some kind of spaghetti skynet, you know.
    
