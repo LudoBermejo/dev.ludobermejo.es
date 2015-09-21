@@ -5,7 +5,7 @@ date:   2015-09-21 18:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/houseOfThrones.jpg"
+cover:  "assets/discWorld.jpg"
 ---
 
 This is possible the most famous design pattern between javascript developers and it's used in every framework we found every week. Most of us has used this pattern even without knowing it, just by copying another example of "how to do a todo list" (tm)
