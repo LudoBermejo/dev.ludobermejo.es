@@ -50,11 +50,8 @@ But, how can things can be private? That's an excelent question! To do that we n
         
         var discWorld = (function() {
           var thievesGuildPassword = "Whale";
-          
           return {
-          
             thievesGuildPasswordMaybe: "No way",
-            
             whatsThePassword: function (pass) {
               if(pass === thievesGuildPassword) {
                 console.log("You may pass");
