@@ -78,18 +78,12 @@ Cool, right? And it could be better. Let's make another example:
 
         var discWorld = (function() {
           var thievesGuildPassword = "Whale";
-          
           function bribe() {
             console.log("Ok you may pass but it's your funeral");
           }
-
-          
           return {
-          
             thievesGuildPasswordMaybe: "No way",
-
             iHaveALittleSomethingForYou: bribe,
-            
             whatsThePassword: function (pass) {
               if(pass === thievesGuildPassword) {
                 console.log("You may pass");
