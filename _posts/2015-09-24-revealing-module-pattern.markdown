@@ -47,17 +47,13 @@ The approx of Christian was to completely separate functions and variables for t
           function bribe() {
               console.log("Ok you may pass but it's your funeral");
           }
-
           function getPassword() {
               return "No way"
           }
-
           function setPassword(newP) {
               thievesGuildPassword = newP;
               console.log("Really?");
           }
-
-
           function thePassword(pass) {
 
               if (pass === thievesGuildPassword) {
@@ -66,7 +62,6 @@ The approx of Christian was to completely separate functions and variables for t
                   console.log("We will remember you... no, not really");
               }
           }
-
           return {
               thievesGuildPasswordMaybe: getPassword,
               iHaveALittleSomethingForYou: bribe,
