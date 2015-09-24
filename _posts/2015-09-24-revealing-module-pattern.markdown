@@ -5,7 +5,7 @@ date:   2015-09-24 18:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/discWorld.jpg"
+cover:  "assets/discWorldReveal.jpg"
 ---
 
 So, if you remember last day, we talk about the [module pattern](http://dev.ludobermejo.es/patterns/2015/09/21/module-pattern.html). Now we will talk about a variant of this pattern: the `Revealing Module` pattern.
