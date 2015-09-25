@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Publish/Subscriber pattern"
-date:   2015-09-22 18:30:00
+date:   2015-09-25 18:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
