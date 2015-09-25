@@ -5,7 +5,7 @@ date:   2015-09-22 18:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/discWorldReveal.jpg"
+cover:  "assets/pubsubpattern.jpg"
 ---
 
 Also known as `Observer`, this pattern allows a `Subscriber` to listen to a `Publisher`. 
