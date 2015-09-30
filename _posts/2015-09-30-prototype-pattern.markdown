@@ -72,7 +72,6 @@ I think it's pretty unclear. All this prototype, with this new K() and all. But 
     );
 
     console.log("Who is the king of the north. It's " + kingOfTheNorth.getKing());
-    console.log(kingOfTheNorth);
     kingOfTheNorth.killHimNow();
 
 
