@@ -5,7 +5,7 @@ date:   2015-09-30 18:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/pubsubpattern.jpg"
+cover:  "assets/prototype-pattern.jpg"
 ---
 
 Ok, I must confess that I never had a teacher who knew a thing about patterns. When I started college the book [Design Patterns: Elements of Reusable Object-Oriented Software](https://en.wikipedia.org/wiki/Design_Patterns) was a novelty and... well, my teachers were not good at all. But they know a lot about C++... I grow my teeth by developing classes with Turbo C++ and I learnt the pros and the cons of object oriented programming.
