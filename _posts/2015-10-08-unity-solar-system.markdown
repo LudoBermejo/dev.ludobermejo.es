@@ -12,6 +12,6 @@ Today I'm not showing my usual posts about patters. That's because I've started 
  
 I expended a couple of hours with this and I'm very excited with the results. I think I could make my own mini-game in a few weeks. Meanwhile, you can check this. It's done in thirty minutes and it's awesome!
   
-[Check this stuff!](http://dev.ludobermejo.es/projects/solarsystem/index.html)
+[Check this stuff! You can click on planet to change the view!](http://dev.ludobermejo.es/projects/solarsystem/index.html)
 
 [You can check the code here](https://github.com/LudoBermejo/UnitySolarSystem)
