@@ -83,4 +83,4 @@ The approx of Christian was to completely separate functions and variables for t
       discWorld.whatsThePassword("Whale"); // log "We will remember you... no, not really"
       discWorld.whatsThePassword("Rincewind"); // log "You may pass"
       
-This module has some problems, as `Module Pattern`. When a private function uses a public function, this public function can't be overridedn, because the private function always will refer to the private function. Yes, I know, it's some kind of tongue-twister but I think it's mostly clear.
+This module has some problems, as `Module Pattern`. When a private function uses a public function, this public function can't be overriden, because the private function always will refer to the private function. Yes, I know, it's some kind of tongue-twister but I think it's mostly clear.
