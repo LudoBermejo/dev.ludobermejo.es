@@ -12,43 +12,217 @@
 
 <script>
 
+    var Human = function() {
 
+        var isShooted = false;
+        var isKilled = false;
 
-    var kingOfTheSevenKingdomsPrototype = Object.create(Object.prototype, {
-        name: {
-            value: "",
-            enumerable: true
-        },
-        getKing: {
-            value: function() {
-                return this.name;
-            },
-            enumerable: true
-        },
+        return {
+            shootHim: shootHim,
+            killHim: killHim,
+            killDirectly: killDirectly
+        }
 
-    })
+        function killDirectly() {
+            shootHim();
+            return killHim();
+        }
 
-    var kingOfTheNorth = Object.create(
-            kingOfTheSevenKingdomsPrototype, {
-                'name': {
-                    value: 'Ned Stark',
-                    enumerable: true
-                },
-                killHimNow: {
-                    value: function() {
-                        console.log("Ok, it's dead. It was a king in the north. What do you expect?");
-                    },
-                    enumerable: true
-                }
+        function shootHim() {
+            console.log("Shooted in the body");
+            isKilled = true;
+        }
+
+        function killHim() {
+            if (isShooted) {
+                isKilled = true;
             }
-    );
+            return isKilled;
+        }
 
-    console.log("Who is the king of the north. It's " + kingOfTheNorth.getKing());
-    kingOfTheNorth.killHimNow();
-
-
+    }
 
 
+    var Zombie = function () {
+
+        var isSlowed = false;
+        var isDown = false;
+        var hasHeadDamage = false;
+        var isKilled = false;
+
+        return {
+
+            shootHimInTheBody: shootHimInTheBody,
+            shootHimInTheKnee: shootHimInTheKnee,
+            shootHimInTheHead: shootHimInTheHead,
+            killHim: killHim,
+            killDirectly: killDirectly
+        }
+
+        function killDirectly() {
+            shootHimInTheBody();
+            shootHimInTheKnee();
+            shootHimInTheHead();
+            return killHim();
+        }
+
+        function shootHimInTheBody() {
+            console.log("Shooted in the body");
+            isSlowed = true;
+        }
+
+        function shootHimInTheKnee() {
+
+            if (isSlowed) {
+                console.log("Shooted in the knee");
+                isDown = true;
+            }
+        }
+
+        function shootHimInTheHead() {
+            if (isDown) {
+                console.log("Shooted in the head");
+                hasHeadDamage = true;
+            }
+        }
+
+        function killHim() {
+            if (hasHeadDamage) {
+                isKilled = true;
+            }
+            return isKilled;
+        }
+    }
+
+    var Dracula = function () {
+
+
+        var youAreInTheMansion = false;
+        var youGoDownToTheBasement = false;
+        var youOpenTheCoffin = false;
+        var impaledWithAStake = false;
+        var headCutted = false;
+        var garlicInHisMouth = false;
+        var isKilled = false;
+
+        return {
+            gotoTheMansion: gotoTheMansion,
+            goDownTheBasement: goDownTheBasement,
+            openTheCoffin: openTheCoffin,
+            impaleHim: impaleHim,
+            cutHisHead: cutHisHead,
+            putGarlicInHisMouth: putGarlicInHisMouth,
+            killHim: killHim,
+            killDirectly: killDirectly
+        }
+
+        function killDirectly() {
+            gotoTheMansion();
+            goDownTheBasement();
+            openTheCoffin();
+            impaleHim();
+            cutHisHead();
+            putGarlicInHisMouth();
+            return killHim();
+        }
+
+        function gotoTheMansion() {
+            console.log("You are in the mansion")
+            youAreInTheMansion = true;
+        }
+
+        function goDownTheBasement() {
+            if (youAreInTheMansion) {
+                console.log("You are in the basement")
+                youGoDownToTheBasement = true;
+            }
+        }
+
+        function openTheCoffin() {
+            if (youGoDownToTheBasement) {
+                console.log("You open the coffin")
+                youOpenTheCoffin = true;
+            }
+        }
+
+        function impaleHim() {
+            if (youOpenTheCoffin) {
+                console.log("You impaled dracula with a stake")
+                impaledWithAStake = true;
+            }
+        }
+
+        function cutHisHead() {
+            if (impaledWithAStake) {
+                console.log("You cut the head of dracula")
+                headCutted = true;
+            }
+        }
+
+        function putGarlicInHisMouth() {
+            if (headCutted) {
+                console.log("You put garlic in his mouth")
+                garlicInHisMouth = true;
+            }
+        }
+
+        function killHim() {
+            if (garlicInHisMouth) {
+                isKilled = true;
+            }
+
+            return isKilled;
+        }
+
+    }
+
+    console.info("KILLING A RANDOM GUY");
+    var someRandomGuy = new Human();
+    console.log("Can I kill him " + someRandomGuy.killHim());
+    someRandomGuy.shootHim();
+    console.log("Can I kill him now " + someRandomGuy.killHim());
+
+
+    console.info("KILLING A RANDOM ZOMBIE");
+
+    var someRandomZombie = new Zombie();
+    console.log("Can I kill him " + someRandomZombie.killHim());
+    someRandomZombie.shootHimInTheBody();
+    console.log("Can I kill him " + someRandomZombie.killHim());
+    someRandomZombie.shootHimInTheKnee();
+    console.log("Can I kill him " + someRandomZombie.killHim());
+    someRandomZombie.shootHimInTheHead();
+    console.log("Can I kill him " + someRandomZombie.killHim());
+
+    console.info("KILLING DRACULA");
+
+    var dracula = new Dracula();
+    console.log("Can I kill him " + dracula.killHim());
+    dracula.gotoTheMansion();
+    console.log("Can I kill him " + dracula.killHim());
+    dracula.goDownTheBasement();
+    console.log("Can I kill him " + dracula.killHim());
+    dracula.openTheCoffin();
+    console.log("Can I kill him " + dracula.killHim());
+    dracula.impaleHim();
+    console.log("Can I kill him " + dracula.killHim());
+    dracula.cutHisHead();
+    console.log("Can I kill him " + dracula.killHim());
+    dracula.putGarlicInHisMouth();
+    console.log("Can I kill him " + dracula.killHim());
+
+
+    console.info("Now kill a human directly");
+    someRandomGuy = new Human();
+    console.log(someRandomGuy.killDirectly());
+
+    console.info("Now kill a zombie directly");
+    someRandomZombie = new Zombie();
+    console.log(someRandomZombie.killDirectly());
+
+    console.info("Now kill Dracula directly");
+    dracula = new Dracula();
+    console.log(dracula.killDirectly());
 
 
 
