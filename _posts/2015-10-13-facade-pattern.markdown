@@ -5,7 +5,7 @@ date:   2015-10-13 22:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/prototype-pattern.jpg"
+cover:  "assets/facadepattern.jpg"
 ---
 
 First time I read about this pattern I don't believe it. So, after all, I was doing `one thing` as expected. In the beginning of internet I worked for the two browsers: Internet explorer and Netscape. In those terrible times we need to hack every javascript call, not only for the different browsers but for the different versions of the same browsers, versions that popup every three months. We had an huge amount of lines of code just to select a DOM object and hide it. Because of the complexity of this calls, I started a library to "group" those complex calls in one only function (like `hide` or `remove`).
