@@ -5,7 +5,7 @@ date:   2015-10-15 01:30:00
 author: Ludo Bermejo
 categories: Unity 
 tags:	unity, games
-cover:  "assets/facadepattern.jpg"
+cover:  "assets/marblemadness.jpg"
 ---
 
 A new game experiment derived from the course I'm taking about Unity! 
