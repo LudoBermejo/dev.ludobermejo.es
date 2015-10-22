@@ -5,7 +5,7 @@ date:   2015-10-21 19:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/facadepattern.jpg"
+cover:  "assets/factory_pattern.jpg"
 ---
 
 Factory pattern! This is one of the favourites of (Markel Arizaga)[https://markelarizaga.wordpress.com/]: he always wants to include it in every module we use! And usually he is right: we use this pattern a lot in Starzplay.
