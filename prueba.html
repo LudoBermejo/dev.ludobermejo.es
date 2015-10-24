@@ -1,10 +1,4 @@
- <html>
-<head>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-
-</head>
-
+<html>
 <body>
 <canvas id="maze" width="500" height="500"></canvas>
 <script>
@@ -52,20 +46,14 @@
                     if( positions[n.x][n.y] == 0) {
                         positions[n.x][n.y] = 1;
 
-                        console.log("Estoy en la ", n, "desde la ",here);
-
                         if(n.x > here.x) {
-                            console.log("Elimino columna ", n);
                             walls.cols[n.x][n.y] = 0;
                         } else if (n.x < here.x) {
                             walls.cols[here.x][here.y] = 0;
-                            console.log("Elimino columna ", here);
                         } else if(n.y > here.y) {
                             walls.rows[n.x][n.y] = 0;
-                            console.log("Elimino fila ", n);
                         } else if(n.y < here.y) {
                             walls.rows[here.x][here.y] = 0;
-                            console.log("Elimino fila", here);
                         }
 
                         here = n;
@@ -123,7 +111,7 @@
 
     }
 
-    
+
 
     var walls = generateMaze(20,20);
 
