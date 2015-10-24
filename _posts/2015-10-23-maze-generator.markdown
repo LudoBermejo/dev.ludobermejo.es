@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Maze generator"
-date:   2015-10-23  19:30:00
+date:   2015-10-23 19:30:00
 author: Ludo Bermejo
 categories: Games
 tags:	games javascript
