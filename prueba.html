@@ -1,4 +1,4 @@
-<html>
+ <html>
 <head>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
@@ -6,12 +6,7 @@
 </head>
 
 <body>
-<div class="container">
-    <div class="packery" >
-
-    </div>
-
-</div>
+<canvas id="maze" width="500" height="500"></canvas>
 <script>
     function generateMaze(width, height) {
         var totalCells = (width*height)-1;
@@ -20,27 +15,29 @@
 
         var positions = new Array();
 
+        var walls = {
+            rows: [],
+            cols: []
+        };
 
         for(var i=0;i<=width-1;i++) {
-
+            walls.rows[i] = new Array();
+            walls.cols[i] = new Array();
             positions[i] = new Array();
             for(var j=0;j<=height-1;j++) {
-                positions[i][j] = {
-                    visited: 0,
-                    walls: {
-                        top: 1,
-                        bottom: 1,
-                        left: 1,
-                        right: 1
-                    }
-                }
+                walls.rows[i][j] = 1;
+                walls.cols[i][j] = 1;
+                positions[i][j] = 0
             }
         }
+
 
         var here = {
             x: Math.floor(Math.random() * width),
             y: Math.floor(Math.random() * height)
         }
+
+
         positions[here.x][here.y] = 1;
 
 
@@ -53,9 +50,23 @@
 
                 if(n.x >= 0 && n.y >= 0 && n.x < width && n.y < height) {
                     if( positions[n.x][n.y] == 0) {
-                        var dif = { x: (n.x - here.x), y: (n.y - here.y) };
-                        positions[n.x][n.y].visited = 1;
+                        positions[n.x][n.y] = 1;
 
+                        console.log("Estoy en la ", n, "desde la ",here);
+
+                        if(n.x > here.x) {
+                            console.log("Elimino columna ", n);
+                            walls.cols[n.x][n.y] = 0;
+                        } else if (n.x < here.x) {
+                            walls.cols[here.x][here.y] = 0;
+                            console.log("Elimino columna ", here);
+                        } else if(n.y > here.y) {
+                            walls.rows[n.x][n.y] = 0;
+                            console.log("Elimino fila ", n);
+                        } else if(n.y < here.y) {
+                            walls.rows[here.x][here.y] = 0;
+                            console.log("Elimino fila", here);
+                        }
 
                         here = n;
                         totalCells--;
@@ -75,25 +86,54 @@
 
     }
 
-    var walls = generateMaze(20,20);
+    function drawWalls(walls) {
 
+        var canvas = document.getElementById('maze');
+        console.log(canvas);
+        if (canvas.getContext){
+            var ctx = canvas.getContext('2d');
+            ctx.beginPath();
 
-    var lines = [];
-    for(var i=0;i<=walls.length-1;i++){
+            var size = 20;
+            for(var i=0;i<=walls.rows.length-1;i++) {
+                for(var j=0;j<=walls.cols.length-1;j++) {
+                    console.log("Estoy en la pos ",i,j)
+                    ctx.moveTo(i*size, j*size);
+                    console.log("Tiene row ",walls.rows[i][j])
+                    if(walls.rows[i][j]==1 && (i >0 || j  > 0)) {
 
-        lines[i] = "";
-        for(var j=0;j<=walls.length-1;j++){
-            if(walls[i][j] == 1) {
-                lines[i] += "-";
-            } else {
-                lines[i] += " ";
+                        console.log("Muevo a ",i*size,j*size);
+                        ctx.moveTo(i*size, j*size);
+                        console.log("Dibujo a ",(i+1)*size,j*size);
+                        ctx.lineTo((i+1)*size,j*size);
+                    }
+
+                    if(walls.cols[i][j]==1) {
+                        ctx.moveTo(i*size, j*size);
+                        ctx.lineTo(i*size,(j+1)*size);
+                    }
+                }
             }
+            ctx.moveTo(i*size,0);
+            ctx.lineTo(i*size,(j-1)*size);
+            ctx.moveTo(i*size,j*size);
+            ctx.lineTo(0,j*size);
+            ctx.stroke();
         }
+
     }
 
-    console.log(lines);
+    
+
+    var walls = generateMaze(20,20);
+
+    drawWalls(walls);
+
+
 
 
 </script>
+
 </body>
+
 </html>
