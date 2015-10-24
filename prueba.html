@@ -1,6 +1,14 @@
 <html>
 <body>
-<canvas id="maze" width="500" height="500"></canvas>
+<label for="rows">Rows</label>
+<input type="text" id="rows" value="20"/>
+<label for="cols">cols</label>
+<input type="text" id="cols" value="20"/>
+<button id="doit">Do it!</button>
+<br>
+<canvas id="maze" width="800" height="800"></canvas>
+<br>
+
 <script>
     function generateMaze(width, height) {
         var totalCells = (width*height)-1;
@@ -77,22 +85,18 @@
     function drawWalls(walls) {
 
         var canvas = document.getElementById('maze');
-        console.log(canvas);
         if (canvas.getContext){
             var ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.beginPath();
 
             var size = 20;
             for(var i=0;i<=walls.rows.length-1;i++) {
                 for(var j=0;j<=walls.cols.length-1;j++) {
-                    console.log("Estoy en la pos ",i,j)
                     ctx.moveTo(i*size, j*size);
-                    console.log("Tiene row ",walls.rows[i][j])
                     if(walls.rows[i][j]==1 && (i >0 || j  > 0)) {
 
-                        console.log("Muevo a ",i*size,j*size);
                         ctx.moveTo(i*size, j*size);
-                        console.log("Dibujo a ",(i+1)*size,j*size);
                         ctx.lineTo((i+1)*size,j*size);
                     }
 
@@ -111,11 +115,19 @@
 
     }
 
+    document.getElementById("doit").addEventListener("click", function() {
+        if(!document.getElementById("rows").value || isNaN(document.getElementById("rows").value) || document.getElementById("rows").value > 40) {
+            alert("we only accept numbers and a max of 40");
+            return;
+        }
+        if(!document.getElementById("cols").value || isNaN(document.getElementById("cols").value) || document.getElementById("cols").value > 40) {
+            alert("we only accept numbers and a max of 40");
+            return;
+        }
+        drawWalls(generateMaze(document.getElementById("rows").value,document.getElementById("cols").value));
+    });
 
 
-    var walls = generateMaze(20,20);
-
-    drawWalls(walls);
 
 
 
