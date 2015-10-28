@@ -1,9 +1,9 @@
 <html>
 <body>
 <label for="rows">Rows</label>
-<input type="text" id="rows" value="20"/>
+<input type="text" id="rows" value="3"/>
 <label for="cols">cols</label>
-<input type="text" id="cols" value="20"/>
+<input type="text" id="cols" value="3"/>
 <button id="doit">Do it!</button>
 <br>
 <canvas id="maze" width="800" height="800"></canvas>
@@ -39,6 +39,9 @@
             y: Math.floor(Math.random() * height)
         }
 
+        here.x = 0;
+        here.y = 0;
+
 
         positions[here.x][here.y] = 1; // And put this position as visited
 
@@ -63,6 +66,7 @@
                     // And is not visited
                     if( positions[n.x][n.y] == 0) {
 
+                        console.log("Muevo a " + n.x + ":" + n.y);
                         found = true;
                         // Then is visited now
                         positions[n.x][n.y] = 1;
@@ -70,11 +74,15 @@
                         // And I need to know if I need to remove a col or a row (floor or wall, if you know what I mean);
                         if(n.x > here.x) {
                             walls.cols[n.x][n.y] = 0;
+                            console.log("Elimin wall"+ n.x + ":" + n.y);
                         } else if (n.x < here.x) {
+                            console.log("Elimino wall"+ here.x + ":" + here.y);
                             walls.cols[here.x][here.y] = 0;
                         } else if(n.y > here.y) {
+                            console.log("Elimino ceiling"+ n.x + ":" + n.y);
                             walls.rows[n.x][n.y] = 0;
                         } else if(n.y < here.y) {
+                            console.log("Elimino ceiling"+ here.x + ":" + here.y);
                             walls.rows[here.x][here.y] = 0;
                         }
 
@@ -120,15 +128,18 @@
             for(var i=0;i<=walls.rows.length-1;i++) {
                 for(var j=0;j<=walls.rows[0].length-1;j++) {
 
-                    console.log(j);
+
                     // Do we have a ceiling
                     if(walls.rows[i][j]==1 && (i >0 || j  > 0)) {
+                        console.log(1);
+                        console.log("Dibujo wall ",{ i:i, j:j})
                         ctx.moveTo(i*size, j*size);
                         ctx.lineTo((i+1)*size,j*size);
                     }
 
                     // Do we have a left wall?
                     if(walls.cols[i][j]==1) {
+                        console.log("Dibujo ceil ",{ i:i, j:j})
                         ctx.moveTo(i*size, j*size);
                         ctx.lineTo(i*size,(j+1)*size);
                     }
