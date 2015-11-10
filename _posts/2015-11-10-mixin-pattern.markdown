@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "Mixin pattern"
-date:   2015-11-11 19:30:00
+date:   2015-11-10 19:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/factory_pattern.jpg"
+cover:  "assets/mixin_pattern.jpg"
 ---
 
 Mixins! Love that name, you now? Mixins are something I love in Javascript development: the inclusion of external ideas to our not-so-poor-day by day language. In other languages, mixins are used as classes that provide extra functionality to subclasses. You can use more that one mixin to inherit your class so you can use multiple functionality for different parent classes. But in Javascript we don't have multiple inheritance so it needs a hacky solution. Not very pretty but it's a way to understand a IMHO a better pattern, the Decorator. 
