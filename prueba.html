@@ -1,174 +1,84 @@
 <html>
 <body>
-<label for="rows">Rows</label>
-<input type="text" id="rows" value="3"/>
-<label for="cols">cols</label>
-<input type="text" id="cols" value="3"/>
-<button id="doit">Do it!</button>
-<br>
-<canvas id="maze" width="800" height="800"></canvas>
-<br>
 
 <script>
-    function generateMaze(width, height) {
-        var totalCells = (width*height)-1; // Total cells we are going to need
 
-        var arrayCellsVisited = []; // The cells we have visited to jump into them when we have no more places to go
-
-        var positions = new Array(); // The positions we have visited (1) or not visited (0);
-
-        var walls = { // The walls. We can know if they exist (1) or not (1)
-            rows: [],
-            cols: []
-        };
-
-        for(var i=0;i<=width-1;i++) { // Initialize all walls to 1 and visited to 0
-            walls.rows[i] = new Array();
-            walls.cols[i] = new Array();
-            positions[i] = new Array();
-            for(var j=0;j<=height-1;j++) {
-                walls.rows[i][j] = 1;
-                walls.cols[i][j] = 1;
-                positions[i][j] = 0
-            }
+    // First we define our hero builder
+    var Hero = function(params) {
+        this.name = params.name || "Nonamed";
+        this.gender = params.gender || "Female";
+        this.whoAmI = function() {
+            console.log("I am " + this.name + ", a " + this.gender)
         }
-
-
-        var here = { // Get a random position of the maze
-            x: Math.floor(Math.random() * width),
-            y: Math.floor(Math.random() * height)
-        }
-
-        here.x = 0;
-        here.y = 0;
-
-
-        positions[here.x][here.y] = 1; // And put this position as visited
-
-
-        //totalCells = 50;
-        while(totalCells) { // While we have cells to visit
-            // Get all the neighbours we can visit
-            var neighbours = [ { x: here.x-1, y: here.y}, {x:here.x+1,y:here.y}, {x:here.x, y:here.y-1}, {x: here.x, y: here.y+1}];
-
-            // Just to know if I found a valid neighbour
-            var found = false;
-            while(neighbours.length) {
-
-
-                // Choose one at random
-                var r = Math.floor(Math.random() * neighbours.length-1)+1;
-                // Remove it for possible neighbours
-                var n = neighbours.splice(r,1)[0];
-                // If this neightbour exists
-                if(n.x >= 0 && n.y >= 0 && n.x < width && n.y < height) {
-
-                    // And is not visited
-                    if( positions[n.x][n.y] == 0) {
-
-                        console.log("Muevo a " + n.x + ":" + n.y);
-                        found = true;
-                        // Then is visited now
-                        positions[n.x][n.y] = 1;
-
-                        // And I need to know if I need to remove a col or a row (floor or wall, if you know what I mean);
-                        if(n.x > here.x) {
-                            walls.cols[n.x][n.y] = 0;
-                            console.log("Elimin wall"+ n.x + ":" + n.y);
-                        } else if (n.x < here.x) {
-                            console.log("Elimino wall"+ here.x + ":" + here.y);
-                            walls.cols[here.x][here.y] = 0;
-                        } else if(n.y > here.y) {
-                            console.log("Elimino ceiling"+ n.x + ":" + n.y);
-                            walls.rows[n.x][n.y] = 0;
-                        } else if(n.y < here.y) {
-                            console.log("Elimino ceiling"+ here.x + ":" + here.y);
-                            walls.rows[here.x][here.y] = 0;
-                        }
-
-                        // now this cell is the visited cell
-                        here = n;
-                        // So we have a cell minus to visit
-                        totalCells--;
-                        // And we store this cell because we need it in the future to visit other neighbours
-                        arrayCellsVisited.push(here);
-                        break;
-                    }
-                }
-            }
-
-
-            if(!found) {
-                here = arrayCellsVisited.pop();
-            }
-
-        }
-
-        return walls;
-
     }
 
-    function drawWalls(walls) {
-
-        // Get the canvas
-        var canvas = document.getElementById('maze');
-
-        // Do we have access to this context?
-        if (canvas.getContext){
-            var ctx = canvas.getContext('2d');
-
-            // Clear the previous maze
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-
-            // The cell width
-            var size = 20;
-
-
-            for(var i=0;i<=walls.rows.length-1;i++) {
-                for(var j=0;j<=walls.rows[0].length-1;j++) {
-
-
-                    // Do we have a ceiling
-                    if(walls.rows[i][j]==1 && (i >0 || j  > 0)) {
-                        console.log(1);
-                        console.log("Dibujo wall ",{ i:i, j:j})
-                        ctx.moveTo(i*size, j*size);
-                        ctx.lineTo((i+1)*size,j*size);
-                    }
-
-                    // Do we have a left wall?
-                    if(walls.cols[i][j]==1) {
-                        console.log("Dibujo ceil ",{ i:i, j:j})
-                        ctx.moveTo(i*size, j*size);
-                        ctx.lineTo(i*size,(j+1)*size);
-                    }
-                }
-            }
-
-            // Draw the end
-            ctx.moveTo(i*size,0);
-            ctx.lineTo(i*size,(j-1)*size);
-            ctx.moveTo(i*size,j*size);
-            ctx.lineTo(0,j*size);
-            ctx.stroke();
+    // Then we define another hero builder
+    var AnotherHero = function(params) {
+        this.name = params.name || "Nonamed";
+        this.gender = params.gender || "Female";
+        this.whoAmI = function() {
+            console.log("I am " + this.name + ", a " + this.gender)
         }
-
     }
 
-    document.getElementById("doit").addEventListener("click", function() {
-        if(!document.getElementById("rows").value || isNaN(document.getElementById("rows").value) || document.getElementById("rows").value > 40) {
-            alert("we only accept numbers and a max of 40");
-            return;
+    // We have a mixin with a fantasy template
+    var FantasyHero = function() {}
+    FantasyHero.prototype = {
+        equipement: function() {
+            console.log("I have a sword")
+        },
+        special: function() {
+            console.log("I use magic");
         }
-        if(!document.getElementById("cols").value || isNaN(document.getElementById("cols").value) || document.getElementById("cols").value > 40) {
-            alert("we only accept numbers and a max of 40");
-            return;
+    }
+
+    // We have a mixin with a scifi template
+    var ScifiHero = function() {}
+    ScifiHero.prototype = {
+        equipement: function() {
+            console.log("I have a laser gun")
+        },
+        special: function() {
+            console.log("I use technology magic");
         }
-        drawWalls(generateMaze(document.getElementById("rows").value,document.getElementById("cols").value));
-    });
+    }
 
+    function addMixin(GetClass, mixin) {
 
+        var methods = [];
+        // if we have more arguments
+        if(arguments[2]) {
+            methods = Array.prototype.slice.call(arguments).splice(2,2);
+
+        } else {
+            methods = Object.getOwnPropertyNames(mixin.prototype);
+        }
+
+        for(var i=0;i<=methods.length-1;i++) {
+            GetClass.prototype[methods[i]] = mixin.prototype[methods[i]];
+        }
+    }
+
+    // Now we add the first mixin to the first hero class builder with two functions
+    addMixin(Hero, FantasyHero, "equipement", "special");
+
+    // Ok let's create a new hero!
+
+    var heroFemale = new Hero({name: "Elisa", gender: "female"})
+    console.log(heroFemale);
+    heroFemale.whoAmI();
+    heroFemale.equipement();
+    heroFemale.special();
+
+    // And now we add the second mixin to the second hero class builder with all the functions
+    addMixin(AnotherHero, ScifiHero);
+
+    // and create the second hero
+    var heroMale = new AnotherHero({name: "Enrico", gender: "male"})
+    console.log(heroMale);
+    heroMale.whoAmI();
+    heroMale.equipement();
+    heroMale.special();
 
 
 
