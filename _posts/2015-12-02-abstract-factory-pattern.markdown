@@ -5,7 +5,7 @@ date:   2015-12-02 19:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/mixin_pattern.jpg"
+cover:  "assets/abstractfactory.jpg"
 ---
 
 Wow! Almost a month without posting in here! Maybe I'm too busy with refactoring our ugly, ugly portal :( Yeah, I know there are worst things but it takes a lot of time that we could use, I don't know, maybe using a good combination between language & framework (PHP and Fatfree are not the best combo a developer can use)
