@@ -81,7 +81,7 @@ Ok, I think this can be explain with a little example. Let's try it!
     // returns {"artist":"Skrillex","date":"Only on christmas","where":"Tokyo stadium"}
 
     var giveMeAWrestlingTicket = AbstractTickerBuyerFactory.getTicket("wrestling", {
-        combat: "Last warrior resurrected VS Old boy Hulk Hogan"
+        combat: "Resurrected Ultimate warrior resurrected VS Old boy Hulk Hogan"
     })
     console.log(JSON.stringify(giveMeAWrestlingTicket));
     // returns "row":"more or less centered","seat":"crick creator","combat":"Last warrior resurrected VS Old boy Hulk Hogan"}
