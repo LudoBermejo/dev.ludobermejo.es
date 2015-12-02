@@ -17,81 +17,73 @@ But what is this `Abstract Factory` thing about? Well, we use it when we want a 
 Ok, I think this can be explain with a little example. Let's try it!
  
    
-            // First we define our hero builder
-            var Hero = function(params) {
-                this.name = params.name || "Nonamed";
-                this.gender = params.gender || "Female";
-                this.whoAmI = function() {
-                    console.log("I am " + this.name + ", a " + this.gender)
-                }
+    // Ok, let's define all three type of tickets
+    function CinemaTicket( options ) {
+        // some defaults
+        this.movie = options.movie || "Birdman";
+        this.canChangeSeats = options.canChangeSeats || false;
+        this.row = options.row || "more or less centered";
+        this.seat = options.seat || "crick creator";
+        this.childs = options.childs || "yes, with the mobile full charged";
+    }
+
+    // A constructor for define what a regular ticket is
+    function ConcertTicket( options ) {
+        this.artist = options.artist || "Skrillex";
+        this.date = options.date || "Only on christmas";
+        this.where = options.where || "Tokyo stadium";
+    }
+
+    // A constructor for define what a premium ticket is
+    function WrestlingTicket( options ) {
+        // some defaults
+        this.row = options.row || "more or less centered";
+        this.seat = options.seat || "crick creator";
+        this.combat = options.combat || "All stars";
+    }
+
+    // Ok, now we create an abstract class
+    var AbstractTickerBuyerFactory = (function() {
+        var typeOfTickets = {};
+
+        return {
+
+            // We can add the type of tickets we want to support
+            addTypeOfTicket: function(name,classOfTicket) {
+                typeOfTickets[name] = classOfTicket;
+            },
+
+            // And now the boring get ticket things
+            getTicket: function(type, specs) {
+                var Ticket = typeOfTickets[type];
+                if(Ticket) return new Ticket(specs);
+                return null
             }
-        
-            // Then we define another hero builder
-            var AnotherHero = function(params) {
-                this.name = params.name || "Nonamed";
-                this.gender = params.gender || "Female";
-                this.whoAmI = function() {
-                    console.log("I am " + this.name + ", a " + this.gender)
-                }
-            }
-        
-            // We have a mixin with a fantasy template
-            var FantasyHero = function() {}
-            FantasyHero.prototype = {
-                equipement: function() {
-                    console.log("I have a sword")
-                },
-                special: function() {
-                    console.log("I use magic");
-                }
-            }
-        
-            // We have a mixin with a scifi template
-            var ScifiHero = function() {}
-            ScifiHero.prototype = {
-                equipement: function() {
-                    console.log("I have a laser gun")
-                },
-                special: function() {
-                    console.log("I use technology magic");
-                }
-            }
-        
-            function addMixin(GetClass, mixin) {
-        
-                var methods = [];
-                // if we have more arguments
-                if(arguments[2]) {
-                    methods = Array.prototype.slice.call(arguments).splice(2,2);
-        
-                } else {
-                    methods = Object.getOwnPropertyNames(mixin.prototype);
-                }
-        
-                for(var i=0;i<=methods.length-1;i++) {
-                    GetClass.prototype[methods[i]] = mixin.prototype[methods[i]];
-                }
-            }
-        
-            // Now we add the first mixin to the first hero class builder with two functions
-            addMixin(Hero, FantasyHero, "equipement", "special");
-        
-            // Ok let's create a new hero!
-        
-            var heroFemale = new Hero({name: "Elisa", gender: "female"})
-            console.log(heroFemale);
-            heroFemale.whoAmI();
-            heroFemale.equipement();
-            heroFemale.special();
-        
-            // And now we add the second mixin to the second hero class builder with all the functions
-            addMixin(AnotherHero, ScifiHero);
-        
-            // and create the second hero
-            var heroMale = new AnotherHero({name: "Enrico", gender: "male"})
-            console.log(heroMale);
-            heroMale.whoAmI();
-            heroMale.equipement();
-            heroMale.special();
+        }
+    })();
+
+    // Ok, let's tregister the tickets
+    AbstractTickerBuyerFactory.addTypeOfTicket("cinema", CinemaTicket);
+    AbstractTickerBuyerFactory.addTypeOfTicket("concert", ConcertTicket);
+    AbstractTickerBuyerFactory.addTypeOfTicket("wrestling", WrestlingTicket);
+
+    // And know let's create some tickets:
+    var giveMeACinemaTicket = AbstractTickerBuyerFactory.getTicket("cinema", {
+        movie: "Star wars VIII",
+        childs: "No way"
+    })
+    console.log(JSON.stringify(giveMeACinemaTicket));
+    // returns {"movie":"Star wars VIII","canChangeSeats":false,"row":"more or less centered","seat":"crick creator","childs":"No way"}
+
+    var giveMeAConcertTicket = AbstractTickerBuyerFactory.getTicket("concert", {
+    })
+    console.log(JSON.stringify(giveMeAConcertTicket));
+    // returns {"artist":"Skrillex","date":"Only on christmas","where":"Tokyo stadium"}
+
+    var giveMeAWrestlingTicket = AbstractTickerBuyerFactory.getTicket("wrestling", {
+        combat: "Last warrior resurrected VS Old boy Hulk Hogan"
+    })
+    console.log(JSON.stringify(giveMeAWrestlingTicket));
+    // returns "row":"more or less centered","seat":"crick creator","combat":"Last warrior resurrected VS Old boy Hulk Hogan"}
 
 Easy, right? We just add the type of object we need, and we do it in execution time. Sweet! This is great use of Factory. But remember: the class must do only one thing. This kind of pattern is great but you can go to the "multiple behaviours by multiple type of objects". Just say no! It's a bad practice and it would convert your code in hell :)
