@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script src="bower_components/socket.io-client/socket.io.js"></script>
+</head>
+<body>
+
+<script>
+
+    var array = [];
+
+    array["left"] = 'sounds/crickets.swf.mp3';
+    array["right"] = 'sounds/dramatic.swf.mp3';
+    array["up"] = 'sounds/ha-gay.mp3';
+    array["down"] = 'sounds/inceptionbutton.mp3';
+    array["space"] = 'sounds/nooo.mp3';
+    array["click"] = 'sounds/trollolol.swf.mp3';
+
+
+    var keyboard = io.connect('http://ludobermejo.es:9100')
+
+    keyboard.on('keypressed', function(obj) {
+        var sound = new Audio(array[obj.name]);
+        sound.play();
+    })
+
+
+
+</script>
+</body>
+</html>

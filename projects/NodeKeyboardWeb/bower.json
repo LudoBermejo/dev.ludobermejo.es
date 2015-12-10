@@ -1,0 +1,21 @@
+{
+  "name": "NodeKeyboardWeb",
+  "homepage": "https://github.com/LudoBermejo/NodeKeyboardWeb",
+  "authors": [
+    "Ludo Bermejo <ludo.bermejo@starzplayarabia.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "socket.io-client": "~1.3.7"
+  }
+}
