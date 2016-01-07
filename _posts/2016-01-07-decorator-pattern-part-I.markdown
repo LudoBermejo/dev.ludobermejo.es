@@ -5,7 +5,7 @@ date:   2016-01-07 19:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/abstractfactory.jpg"
+cover:  "assets/decoratorpartone.jpg"
 ---
 
 Decorators! Oh my, this is getting serious. Ok, first is first: you know OOP has changed in the last decade. At first all was about classes, inheritance and so. But step by step the patterns has changed the way of doing things, not only on Javascript but on every aspect of the development process. And Decorator pattern is one of the most successful patterns that brings the new paradigm (where 'new' is really old in terms of development cycles, but you know what I mean).
