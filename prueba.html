@@ -2,49 +2,21 @@
 <body>
 
 <script>
-    function StarWarsGuy(name, origin) {
-        this.name = name;
-        this.origin = origin;
 
-        this.getImportance = function() {
-            return 0;
-        }
+    var gameOfThronesCharacters = [
+        { house: "Stark", childs: 5},
+        { house: "Lannister", childs: 3 },
+        { house: "Baratheon", childs: 3 },
+        { house: "Tully" , childs: 4}
+    ]
+    var housesWithMoreThat3Childs = gameOfThronesCharacters.reduce(function(moreThan3, house) {
+        if(house.childs >3)
+            moreThan3.push(house)
 
-    }
+        return moreThan3;
+    },[]);
 
-    function HasASpaceShip(starWarsGuy) {
-        var importance = starWarsGuy.getImportance();
-
-        starWarsGuy.getImportance = function() {
-            return importance + 10;
-        }
-    }
-
-    function isAJedi(starWarsGuy) {
-        var importance = starWarsGuy.getImportance();
-
-        starWarsGuy.getImportance = function() {
-            return importance + 20;
-        }
-    }
-
-    function isASkywalker(starWarsGuy) {
-        var importance = starWarsGuy.getImportance();
-
-        starWarsGuy.getImportance = function() {
-            return importance + 50;
-        }
-    }
-
-    var luke = new StarWarsGuy("Luke","Tattoine");
-
-    HasASpaceShip(luke);
-    isAJedi(luke);
-    isASkywalker(luke);
-
-    console.log(luke.getImportance());
-
-    // Yeah, you know... 80, it's less important that Anakin!
+    console.log(JSON.stringify(housesWithMoreThat3Childs, null, 2));
 
 </script>
 
