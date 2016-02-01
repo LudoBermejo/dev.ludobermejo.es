@@ -47,6 +47,12 @@ descriptions:
   - cat: teams
     desc: "Posts about team building."
 
+  - cat: unity
+    desc: "Post about Unity3d Development"
+
+  - cat: Functional
+    desc: "Post about functional programming"
+
   - cat: theorical
     desc: "Theorical stuff aka known as 'wtf are you talking about'."
 
