@@ -3,7 +3,7 @@ layout: post
 title:  "Higher-order functions (Functional programming I)"
 date:   2016-02-01 19:30:00
 author: Ludo Bermejo
-categories: Functional 
+categories: functional 
 tags:	functional 
 cover:  "assets/decoratorpartone.jpg"
 ---

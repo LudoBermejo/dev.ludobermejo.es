@@ -50,7 +50,7 @@ descriptions:
   - cat: unity
     desc: "Post about Unity3d Development"
 
-  - cat: Functional
+  - cat: functional
     desc: "Post about functional programming"
 
   - cat: theorical
