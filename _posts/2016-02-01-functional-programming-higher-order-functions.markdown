@@ -5,7 +5,7 @@ date:   2016-02-01 19:30:00
 author: Ludo Bermejo
 categories: functional 
 tags:	functional 
-cover:  "assets/decoratorpartone.jpg"
+cover:  "assets/functional_programming_part_1.jpg"
 ---
 
 Ok, I know, I know, I must continue with the decorator pattern. But in the last few days I'm learning about functional programming and I want to share with you my first tests.
