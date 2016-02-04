@@ -5,7 +5,7 @@ date:   2016-02-04 12:00:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/decoratorpartone.jpg"
+cover:  "assets/abstract.jpg"
 ---
 
 *Note: If you come here for the first time, you might want to <a href="/patterns/2016/01/07/decorator-pattern-part-I.html">read my first post</a>.*
