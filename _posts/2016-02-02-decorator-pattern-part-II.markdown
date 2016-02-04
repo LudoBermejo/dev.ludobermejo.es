@@ -140,7 +140,7 @@ Ok, now let's check the example
     // and let's add the decorator
 
     StarwarsSpaceShipDecorator(starwarsShip);
-
+ 
     // Everything's ok, the object can fly, fly in space, go into hyperspace and fire phasers
     console.log(starwarsShip);
 
