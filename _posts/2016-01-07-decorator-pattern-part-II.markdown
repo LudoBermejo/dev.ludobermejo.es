@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Decorator pattern (part II): Abstract Decorators"
-date:   2016-01-07 19:30:00
+date:   2016-02-04 19:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
