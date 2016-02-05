@@ -3,21 +3,57 @@
 
 <script>
 
+
+    // This function creates a currying function of a usual function.
+    var curry= function(f) {
+        var paramsOfFunction = f.length;
+        var args  = Array.prototype.slice.call(arguments, 1);
+
+        adder = function() {
+            var largs = args;
+
+            if (arguments.length > 0) {
+                // We must be careful to copy the `args` array with `concat` rather
+                // than mutate it; otherwise, executing curried functions can have
+                // strange non-local effects on other curried functions.
+                largs = largs.concat(Array.prototype.slice.call(arguments, 0));
+            }
+
+            if (largs.length >= paramsOfFunction) {
+                return f.apply(this, largs);
+            } else {
+                return curry.apply(this, [f].concat(largs));
+            }
+        };
+
+        return (args.length >= paramsOfFunction) ? adder() : adder;
+    };
+
     var gameOfThronesCharacters = [
-        { house: "Stark", childs: 5},
-        { house: "Lannister", childs: 3 },
-        { house: "Baratheon", childs: 3 },
-        { house: "Tully" , childs: 4}
+        { name: "John Stark", house: "Unknown"},
+        { name: "Catelyn Stark", house: "Tully"},
+        { name: "Jorah Mormont", house: "Mormont"},
+        { name: "Jaime Lannister", house: "Lannister"},
+        { name: "Tyrion Lannister", house: "Lannister"},
+        { name: "Sansa Stark", house: "Stark"},
+        { name: "Robert Baratheon", house: "Baratheon"},
+        { name: "Benjen Stark", house: "Stark"},
+        { name: "Cersei Lannister", house: "Lannister"},
+        { name: "Aria Stark", house: "Stark"}
     ]
-    var housesWithMoreThat3Childs = gameOfThronesCharacters.reduce(function(moreThan3, house) {
-        if(house.childs >3)
-            moreThan3.push(house)
 
-        return moreThan3;
-    },[]);
+    var getById = curry(function(property, object) {
+        return object[property]
+    });
 
-    console.log(JSON.stringify(housesWithMoreThat3Childs, null, 2));
+    var names = gameOfThronesCharacters.map(getById('name'));
+    var houses = gameOfThronesCharacters.map(getById('house'));
 
+
+    console.log(JSON.stringify(names, null, 2));
+
+
+    console.log(JSON.stringify(houses, null, 2));
 </script>
 
 </body>
