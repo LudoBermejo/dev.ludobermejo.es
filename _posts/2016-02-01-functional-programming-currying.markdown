@@ -5,7 +5,7 @@ date:   2016-02-05 14:00:00
 author: Ludo Bermejo
 categories: functional 
 tags:	functional 
-cover:  "assets/functional_programming_part_1.jpg"
+cover:  "assets/functional_programming_part_2.jpg"
 ---
 
 With this concept I still have problems. I can see how it works, I can see some uses, but I'm still learning why is so important in other languages as Haskell. Still I want to share with you my advancements because it's a very interesting stuff.
