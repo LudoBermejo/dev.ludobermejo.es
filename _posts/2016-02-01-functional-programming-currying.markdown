@@ -213,7 +213,8 @@ This will return exactly the same.
       "Cersei Lannister",
       "Aria Stark"
     ]
-    prueba.html:56 [
+    
+    [
       "Unknown",
       "Tully",
       "Mormont",
