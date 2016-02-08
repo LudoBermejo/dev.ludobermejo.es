@@ -5,7 +5,7 @@ date:   2016-02-08 13:00:00
 author: Ludo Bermejo
 categories: functional 
 tags:	functional 
-cover:  "assets/functional_programming_part_2.jpg"
+cover:  "assets/functional_programming_part_3.jpg"
 ---
 
 Recursion! This is a familiar face for everyone who learned computing in the 90s. At that time recursion was like the hoy grail and all teachers said that you must use it whenever possible. First time I used it on a real project (about 1999) I get a memory error and about one hundred problems. Because, you know, Recursion was useful... only for a couple of things. After a few years recursion get the "don't use this" label and people forgot how to use it. And now it's coming back thanks to `functional programming`.
