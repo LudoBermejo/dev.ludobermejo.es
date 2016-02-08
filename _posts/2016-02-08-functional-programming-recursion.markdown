@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Recursion (Functional programming III)"
-date:   2016-02-08 14:00:00
+date:   2016-02-08 13:00:00
 author: Ludo Bermejo
 categories: functional 
 tags:	functional 
