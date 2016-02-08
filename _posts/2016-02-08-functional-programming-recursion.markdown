@@ -56,15 +56,6 @@ Now we want to make a family tree. What can we do to achive that? Well, we need 
                 return obj.childOf === childOf
             }
         })
-
-      
-        for(var i in filtered) {
-            
-            if(!node[filtered[i].family]) node[filtered[i].family] = {}
-            
-            node[filtered[i].family][filtered[i].name] = makeFamilyTree(data, family, filtered[i].name)
-        }
-        return node;
         
        // Now we use a map to update the nodes  
        filtered.map(function(character) {
