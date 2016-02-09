@@ -77,7 +77,7 @@ I think it's pretty unclear. All this prototype, with this new K() and all. But 
 
 Ok, what happened here? It's a bit difficult to explain if you don't know anything about ECMASCRIPT 5, but it's simly enough: kingOfTheSevenKingdoms is an object and kingOfTheNorth is a "copy" of the object with two properties: name and killHimNow. When we call `kingOfTheNorth.getKing()` we are using the "father" function. When we call `kingOfTheNorth.killHimNow();` we are using the "child" one. And if we want all ECMASCRIPT 5:
 
-   var kingOfTheSevenKingdomsPrototype = Object.create(Object.prototype, {
+    var kingOfTheSevenKingdomsPrototype = Object.create(Object.prototype, {
         name: {
             value: "",
             enumerable: true
