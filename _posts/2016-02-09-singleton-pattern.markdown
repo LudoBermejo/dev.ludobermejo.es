@@ -5,7 +5,7 @@ date:   2016-02-09 13:00:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/abstract.jpg"
+cover:  "assets/singleton-pattern.jpg"
 ---
 
 Oh my! I totally forgot this pattern, one of the most used in interviews :D
