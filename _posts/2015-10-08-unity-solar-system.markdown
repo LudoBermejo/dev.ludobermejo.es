@@ -3,7 +3,7 @@ layout: post
 title:  "Unity solar system"
 date:   2015-10-08 22:30:00
 author: Ludo Bermejo
-categories: Unity 
+categories: unity 
 tags:	unity, games
 cover:  "assets/UnitySolarSystem.jpg"
 ---

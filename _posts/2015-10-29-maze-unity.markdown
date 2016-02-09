@@ -3,7 +3,7 @@ layout: post
 title:  "Maze runner"
 date:   2015-10-29 0:16:00
 author: Ludo Bermejo
-categories: Unity
+categories: unity
 tags:	games, unity
 cover:  "assets/MazeRunner.jpg"
 ---

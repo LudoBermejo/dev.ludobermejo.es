@@ -3,7 +3,7 @@ layout: post
 title:  "Box shooter"
 date:   2015-10-21 23:32:00
 author: Ludo Bermejo
-categories: Unity 
+categories: unity 
 tags:	unity, games
 cover:  "assets/boxshooter.jpg"
 ---
