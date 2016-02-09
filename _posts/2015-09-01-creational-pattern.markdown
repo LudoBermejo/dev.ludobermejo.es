@@ -14,7 +14,7 @@ So, `what this is all about`? Well, this pattern plays with the idea of `creatio
 
     var thisIsMyObject = new Object();
     var thisIsAnotherObject = {};
-    var thisIsMyThirObject = Object.create(null); // I only saw this creation on tutorial pages.  
+    var thisIsMyThirObject = Object.create(null); // we will use this in the future  
 
 In the above example we just create an empty object, `without any properties`.
 
