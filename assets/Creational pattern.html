@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)http://dev.ludobermejo.es/patterns/2015/09/01/creational-pattern.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Creational pattern</title>
+  <meta name="description" content="This design pattern conforms the base of many other ones. Usually it is the first pattern that people learn because is one of the simplest.">
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="./Creational pattern_files/font-awesome.min.css">
+  <link rel="stylesheet" href="./Creational pattern_files/monokai_sublime.min.css">
+  <link rel="stylesheet" href="./Creational pattern_files/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="http://dev.ludobermejo.es/assets/icons/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="http://dev.ludobermejo.es/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="http://dev.ludobermejo.es/assets/icons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="http://dev.ludobermejo.es/assets/icons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://dev.ludobermejo.es/assets/icons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="http://dev.ludobermejo.es/assets/icons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://dev.ludobermejo.es/assets/icons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="http://dev.ludobermejo.es/assets/icons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="http://dev.ludobermejo.es/assets/icons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="http://dev.ludobermejo.es/assets/icons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="http://dev.ludobermejo.es/assets/icons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="http://dev.ludobermejo.es/assets/icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="http://dev.ludobermejo.es/assets/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="http://dev.ludobermejo.es/assets/icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="http://dev.ludobermejo.es/assets/icons/favicon-16x16.png">
+	<link rel="manifest" href="http://dev.ludobermejo.es/assets/icons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- Site styles -->
+  <link rel="stylesheet" href="./Creational pattern_files/main.css">
+  <link rel="canonical" href="http://dev.ludobermejo.es//patterns/2015/09/01/creational-pattern.html">
+  <link rel="alternate" type="application/rss+xml" title="dev.ludobermejo.es" href="http://dev.ludobermejo.es//feed.xml">
+
+	<meta content="dev.ludobermejo.es" property="og:site_name">
+	
+	<meta content="Creational pattern" property="og:title">
+	
+	
+	<meta content="article" property="og:type">
+	
+	
+	<meta content="A development blog from Ludo Bermejo
+" property="og:description">
+	
+	
+	<meta content="http://dev.ludobermejo.es/patterns/2015/09/01/creational-pattern.html" property="og:url">
+	
+	
+	<meta content="2015-09-01T18:30:00+00:00" property="article:published_time">
+	<meta content="http://dev.ludobermejo.es/about/" property="article:author">
+	
+	
+	<meta content="http://dev.ludobermejo.es/assets/houseOfThrones.jpg" property="og:image">
+	
+	
+	
+	<meta content="Patterns" property="article:section">
+	
+	
+	
+	
+	<meta content="patterns" property="article:tag">
+	
+	
+<script async="" src="./Creational pattern_files/analytics.js"></script><script type="text/javascript" async="" src="./Creational pattern_files/embed.js"></script><style type="text/css"></style></head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="http://dev.ludobermejo.es/" class="logo">
+    	
+      <img src="./Creational pattern_files/logo.png" alt="dev.ludobermejo.es">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+    	<i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu">
+      	
+          
+          <li class="nav-link"><a href="http://dev.ludobermejo.es/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          </li><li class="nav-link"><a href="http://dev.ludobermejo.es/posts/">Posts</a>
+          
+        
+          
+        
+      </li></ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container has-cover" style="background-image: url(/assets/houseOfThrones.jpg);">
+	<div class="scrim has-cover">
+		<header class="post-header">
+		  <h1 class="title">Creational pattern</h1>
+		  <p class="info">by <strong>Ludo Bermejo</strong></p>
+		</header>
+	</div>
+</div>
+
+<div class="wrapper">
+
+
+
+<section class="post-meta">
+	<div class="post-date">September 1, 2015</div>
+	<div class="post-categories">
+	in 
+	  
+		<a href="http://dev.ludobermejo.es/category/Patterns">Patterns</a>
+	  
+	
+	</div>
+</section>	
+
+<article class="post-content">
+  <p>This design pattern conforms the base of many other ones. Usually it is the first pattern that people learn because is one of the simplest.</p>
+
+<p>So, <code class="highlighter-rouge">what this is all about</code>? Well, this pattern plays with the idea of <code class="highlighter-rouge">creation  process</code>, mostly of objects. You know, in Javascript there is a few ways to create things, like:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code class="hljs javascript"><span class="hljs-keyword">var</span> thisIsMyObject = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+<span class="hljs-keyword">var</span> thisIsAnotherObject = {};
+<span class="hljs-keyword">var</span> thisIsMyThirObject = <span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>); <span class="hljs-comment">// we will use this in the future  </span>
+</code></pre>
+</div>
+
+<p>In the above example we just create an empty object, <code class="highlighter-rouge">without any properties</code>.</p>
+
+<p>Now, how can we add some props to this new object? Let’s check some ways:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code class="hljs javascript" style="
+    width: 1000px;
+"><span class="hljs-keyword">var</span> houseOfGameOfThrones = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>(); <span class="hljs-comment">// we create the object</span>
+
+<span class="hljs-comment">// First way</span>
+houseOfGameOfThrones.name = <span class="hljs-string">"Baratheon"</span>; <span class="hljs-comment">// we assign a property called name</span>
+<span class="hljs-built_in">console</span>.log(houseOfGameOfThrones.name); <span class="hljs-comment">// this is one way to access the property</span>
+
+<span class="hljs-comment">// Second way</span>
+houseOfGameOfThrones[<span class="hljs-string">"numberOfDeathsInBooks"</span>] = <span class="hljs-string">"About five"</span>;
+<span class="hljs-built_in">console</span>.log(houseOfGameOfThrones[<span class="hljs-string">"numberOfDeathsInBooks"</span>]); <span class="hljs-comment">// this is another way to access the property</span>
+
+<span class="hljs-comment">// Third way. ATTENTION: Only for ECMASCRIPT 5 browsers/servers</span>
+<span class="hljs-built_in">Object</span>.defineProperty(houseOfGameOfThrones, <span class="hljs-string">"actualLeader"</span>, {
+    configurable: <span class="hljs-literal">true</span>,
+    writable: <span class="hljs-literal">true</span>,
+    enumerable: <span class="hljs-literal">true</span>,
+    value: <span class="hljs-string">"...it's complicated"</span>,
+});
+
+<span class="hljs-comment">// Fourth way. Very similar to third, but for multiple properties:</span>
+<span class="hljs-built_in">Object</span>.defineProperties(houseOfGameOfThrones, {
+        <span class="hljs-string">"numberOfHeirs"</span>: {
+            value: <span class="hljs-string">"Who nows"</span>,
+            writable: <span class="hljs-literal">true</span>
+        },
+         <span class="hljs-string">"previousLeader"</span>: {
+            value: <span class="hljs-string">"Rober Barateon"</span>,
+            writable: <span class="hljs-literal">false</span>
+        }
+    }
+);
+</code></pre>
+</div>
+
+<p>Again, we can use different approaches to make properties. But remember that the <code class="highlighter-rouge">third and the fourth way</code> can only be used on <a href="http://kangax.github.io/compat-table/es5/">ECMASCRIPT 5</a> compatible browsers and servers. Yeah, I know, they are a little verbose, but they are veeery impressive and you can use them to make your app more easy to follow when it has multiple objects.</p>
+
+</article>
+
+
+
+<section class="tags">
+	<strong>Tags:</strong> <a href="http://dev.ludobermejo.es/tag/patterns">patterns</a>
+</section>
+
+
+
+<section class="rss">
+	<p class="rss-subscribe text"><strong>Subscribe <a href="http://dev.ludobermejo.es/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+      <a href="http://twitter.com/share?text=Creational+pattern&amp;url=http://dev.ludobermejo.es/patterns/2015/09/01/creational-pattern.html" onclick="window.open(this.href, &#39;twitter-share&#39;, &#39;width=550,height=255&#39;);return false;">
+      	<i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+  
+    
+      <a href="http://www.facebook.com/sharer.php?t=Creational+pattern&amp;u=http://dev.ludobermejo.es/patterns/2015/09/01/creational-pattern.html" onclick="window.open(this.href, &#39;facebook-share&#39;, &#39;width=550,height=255&#39;);return false;">
+      	<i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+  
+    
+  
+    
+      <a href="http://www.linkedin.com/shareArticle?mini=trueCreational+pattern&amp;url=http://dev.ludobermejo.es/patterns/2015/09/01/creational-pattern.html" onclick="window.open(this.href, &#39;linkedin-share&#39;, &#39;width=550,height=255&#39;);return false;">
+      	<i class="fa fa-linkedin-square fa-lg"></i>
+      </a>
+    
+  
+    
+      <a href="http://plus.google.com/share?title=Creational+pattern&amp;url=http://dev.ludobermejo.es/patterns/2015/09/01/creational-pattern.html" onclick="window.open(this.href, &#39;google-plus-share&#39;, &#39;width=550,height=255&#39;);return false;">
+      	<i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</section>
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"><iframe id="dsq-app2" name="dsq-app2" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Creational pattern_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 321px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'devludobermejoes';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;</noscript>
+  
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">dev.ludobermejo.es</h3>
+
+    <div class="site-navigation">
+    	
+    	<p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="http://dev.ludobermejo.es/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          </li><li class="nav-link"><a href="http://dev.ludobermejo.es/posts/">Posts</a>
+        
+        
+        
+        
+      </li></ul>
+    </div>
+
+    <div class="site-contact">
+
+    	<p><strong>Contact</strong>
+      </p><ul class="social-media-list">
+      	<li>
+      		<a href="mailto:LudoBermejo@gmail.com">
+	      		<i class="fa fa-envelope-o"></i>
+	      		<span class="username">LudoBermejo@gmail.com</span>
+      		</a>
+      	</li>
+
+      	
+      	
+      	<li>
+          <a href="https://twitter.com/LudoBermejo" title="Follow me on Twitter">
+            <i class="fa fa-twitter"></i>
+            <span class="username">@Ludobermejo</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	
+      	
+      	<li>
+          <a href="https://github.com/ludobermejo" title="Fork me on GitHub">
+            <i class="fa fa-github"></i>
+            <span class="username">ludobermejo</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	<li>
+          <a href="https://linkedin.com/in/ludobermejo" title="Connect with me on LinkedIn">
+            <i class="fa fa-linkedin"></i>
+            <span class="username">Ludo Bermejo</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	<li>
+          <a href="https://plus.google.com/+LudoBermejo/posts" title="Add me to your Circles">
+            <i class="fa fa-google-plus"></i>
+            <span class="username">ludobermejo</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+    	<p class="rss-subscribe text"><strong>Subscribe <a href="http://dev.ludobermejo.es/feed.xml">via RSS</a></strong></p>
+      <p class="text">A development blog from Ludo Bermejo
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="./Creational pattern_files/jquery-1.11.2.min.js"></script>
+<script src="./Creational pattern_files/highlight.min.js"></script>
+<script src="./Creational pattern_files/lightbox.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+	// Syntax highlighting
+	hljs.initHighlightingOnLoad();
+
+	// Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-67187165-1', 'auto');
+  ga('send', 'pageview', {
+  	'page': '/patterns/2015/09/01/creational-pattern.html',
+  	'title': 'Creational pattern'
+  });
+</script>
+
+
+
+  
+
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src=""><div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div></body></html>

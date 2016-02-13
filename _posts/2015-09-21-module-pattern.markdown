@@ -23,7 +23,9 @@ So then, what's the module pattern? Well, first of all, to understand this patte
             numberOfHugeTurtles: 1,
             colorOfMagic: "octarine",
             aWonderfulWorld: function() {
-              console.log("We have " + this.numberOfGiantElephants + " elephants over " + this.numberOfHugeTurtles + " all over the " + this.colorOfMagic);
+              console.log("We have " + this.numberOfGiantElephants 
+              + " elephants over " + this.numberOfHugeTurtles 
+              + " all over the " + this.colorOfMagic);
             },
             peopleSay: function (say) {
               console.log("People: "+say);
