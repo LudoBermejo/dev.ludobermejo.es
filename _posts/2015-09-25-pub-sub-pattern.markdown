@@ -28,7 +28,8 @@ Now, how can we build one of this patterns, in a `vanilla-javascript` style? Bec
     function Publisher() {
 
         var events = []; // This array will store all the events
-        var currentUUID = 0; // We can made it in other ways, but with this we can remove subscribers very fast
+        var currentUUID = 0; // We can made it in other ways, 
+                             // but with this we can remove subscribers very fast
         return { // oh, yeah, revealing pattern
             subscribe: subscribe,
             unsubscribe: unsubscribe,
@@ -36,7 +37,8 @@ Now, how can we build one of this patterns, in a `vanilla-javascript` style? Bec
         }
 
         /**
-         * As you can imagine, this function subscribe a "event" wiwth a "function" by using the events array
+         * As you can imagine, this function subscribe a "event" 
+         * with a "function" by using the events array
          *
          * @param event
          * @param myFunc
@@ -55,7 +57,8 @@ Now, how can we build one of this patterns, in a `vanilla-javascript` style? Bec
         }
 
         /**
-         * Again this is pretty simple. We get the uuid we return in publish method and look for it until we found it
+         * Again this is pretty simple. We get the uuid we return 
+         * in publish method and look for it until we found it
          * Then, we remove it from the subscribers
          *
          * @param uuid
@@ -75,7 +78,8 @@ Now, how can we build one of this patterns, in a `vanilla-javascript` style? Bec
 
 
         /**
-         * The publish itself. This function will call all the subscribers sending the event and the parameters received
+         * The publish itself. This function will call all the subscribers 
+         * sending the event and the parameters received
          *
          * @param event
          * @param args
@@ -113,11 +117,13 @@ Now, how can we build one of this patterns, in a `vanilla-javascript` style? Bec
     // We publish Event2, and console log must appear once
     publisher.publish("Event2", "Call Event2");
 
-    // We remove one subscriber for Event1, so when we call event one, we only get one console.log
+    // We remove one subscriber for Event1, so when 
+    // we call event one, we only get one console.log
     publisher.unsubscribe(testSubscriptionEvent1First);
     publisher.publish("Event1", "Call Event1");
 
-    // We remove the only subscriber for Event2, so when we call event two, we don't get anything in console.log
+    // We remove the only subscriber for Event2, so when we call 
+    // event two, we don't get anything in console.log
     publisher.unsubscribe(testSubscriptionEvent2First);
     publisher.publish("Event2", "Call Event2");
 
