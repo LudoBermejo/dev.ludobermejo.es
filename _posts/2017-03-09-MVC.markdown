@@ -1,0 +1,53 @@
+---
+layout: post
+title:  "MVC pattern"
+date:   2017-03-09 13:00:00
+author: Ludo Bermejo
+categories: Patterns 
+tags:	patterns 
+cover:  "assets/singleton-pattern.jpg"
+---
+
+Ok, this pattern  forms the basis of all modern javascript frameworks. Postulated in the 70's, the Model View Controller (MVC) pattern has been evolving for almost 40 years. It gained popularity after the book [Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612) until the actual days, with new variations like the `MV* pattern`.
+
+But, What is it about? MVC Patterns divides an application into three components
+
+## MODELS
+
+Models are used to work with the application's data. They are never used for UIs or presentation, but for specific parts of data that the application may require.
+
+Now let's see an example in Vanillascript. I'm not using any framework in this examples but, please, if you want to do a new app, don't reinvent the wheel. There are dozens of great frameworks to do MVC applications.
+
+    var MutantOfMarvel = function() {
+
+        var basicData = {
+            name: "unknown",
+            group: "unknown",
+            powers: "unknown"
+        }
+
+        function init() {
+            this.name = basicData.name;
+            this.group = basicData.group;
+            this.powers = basicData.powers;
+        }
+
+        return {
+            name: null,
+            group: null,
+            powers: null,
+            init: init
+        }
+
+    }
+
+    var mutant = new MutantOfMarvel();
+    console.log(mutant.name); // it will return null
+    mutant.init();
+    console.log(mutant.name); // it will return unknown
+    
+Asy you can see, this object not only has the pure data, but it has all the operations we do in the data (like initialization). We usually used them to support validation, to gain persistence or event to work with multiple models grouped in `Collections` (like XMEN group for the MutantsOfMarvel).
+     
+So, in a nutshell, we use models to work with pure data.
+      
+## VIEWS
