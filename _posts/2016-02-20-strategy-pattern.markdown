@@ -5,7 +5,7 @@ date:   2016-02-20 13:00:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/singleton-pattern.jpg"
+cover:  "assets/strategy.jpg"
 ---
 
 `Strategy pattern` is a interesting but barely used pattern. It allows us to define multiple algorithms and make them interchangeable. So the "client" always call the same function and it receives the same result, but with different codes. 
