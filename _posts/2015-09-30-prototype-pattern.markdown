@@ -37,8 +37,9 @@ The oldie one:
 
         var k = new K();
         k.killHimNow = function() {
-            console.log("Ok, it's dead. It was a king in the north. What do you expect?");
-        }
+            console.log("Ok, it's dead. " +
+                        "It was a king in the north. What do you expect?");
+       }
 
         k.born(name);
         return k;
@@ -64,8 +65,9 @@ I think it's pretty unclear. All this prototype, with this new K() and all. But 
                 },
                 killHimNow: {
                     value: function() {
-                        console.log("Ok, it's dead. It was a king in the north. What do you expect?");
-                    },
+                         console.log("Ok, it's dead. " +
+                                     "It was a king in the north. What do you expect?");
+                   },
                     enumerable: true
                 }
             }
@@ -99,7 +101,8 @@ Ok, what happened here? It's a bit difficult to explain if you don't know anythi
                 },
                 killHimNow: {
                     value: function() {
-                        console.log("Ok, it's dead. It was a king in the north. What do you expect?");
+                        console.log("Ok, it's dead. " +
+                                    "It was a king in the north. What do you expect?");
                     },
                     enumerable: true
                 }
