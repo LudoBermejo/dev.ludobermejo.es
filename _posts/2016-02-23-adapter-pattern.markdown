@@ -5,7 +5,7 @@ date:   2016-02-23 10:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/strategy.jpg"
+cover:  "assets/adapter_pattern.jpg"
 ---
 
 Another semi-unknown pattern (but still very used if you work with JQUERY) is the `Adapter pattern`. It is used to translate the properties and methods of one object (the interface) to another object. Why would we do that? Imagine you have an huge and complex system, and imagine that you want to update it. You could revamp the code completely, but that's a lot of effort. You can take the `Adapter pattern` way too, and do it step by step until you complete the code. And what you need to do? A progressively changing class? No, you can make an Adapter that allows the new class understand the old class. 
