@@ -48,7 +48,7 @@ And how can you do that? I'm glad you asked it; let's play with the code:
 
 Ok, we have a new and shinny t800. Sarah Connor, be careful!... or maybe not because...
     
-<iframe width="420" height="315" src="https://www.youtube.com/watch?v=2KeniFoiT-0" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/2KeniFoiT-0" frameborder="0" allowfullscreen></iframe>
 
 Ok, that didn't work. So Skynet, what we can do? Oh, yeah, we have this thing, the t1000. It does a LOT of things:
 
