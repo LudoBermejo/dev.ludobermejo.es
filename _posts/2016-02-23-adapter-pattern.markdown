@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Adapter pattern"
-date:   2016-02-23 11:00:00
+date:   2016-02-23 10:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
