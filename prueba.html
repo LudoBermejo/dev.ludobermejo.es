@@ -4,78 +4,109 @@
 <script>
 
 
-   // So we have a door closed
+   // So let's create the t800
 
-   var Door = function() {
+    var T800 = function() {
 
-       var character;
-       return {
-           isClosed: true,
-           character: character,
-           whoIsInFrontOfMe: whoIsInFrontOfMe,
-           openMe: openMe
-       }
-
-
-       function whoIsInFrontOfMe(c) {
-           character = c;
-        }
-
-       function openMe() {
-           if(character) {
-               return isClosed =  character.openADoor();
-           } else {
-               return "Emptyness can't open the door"
-           }
-       }
-
-   }
-
-   // And we have three characters
-
-    function Gandalf() {
         return {
-            openADoor: openADoor
+            openADoor: openADoor,
+            breakAGlass: breakAGlass,
+            pursueSarahConnor: pursueSarahConnor
         }
 
         function openADoor() {
-            return "Speak 'friend' and enter";
+            return "T800 open the doors by crushing cars into them";
+        }
+
+        function breakAGlass() {
+            return "T800 can break a glass by pushing it with his bare hands";
+        }
+
+        function pursueSarahConnor() {
+            return "T800 can follow Sarah Connor by car and motorcycle";
         }
     }
 
-   function Rambo() {
+    // So t800 can do lot's of things:
+
+    var t800 = new T800();
+
+   console.log(t800.openADoor());
+   // T800 open the doors by crushing cars into them
+   console.log(t800.breakAGlass());
+   // T800 can break a glass by pushing it with his bare hands
+   console.log(t800.pursueSarahConnor());
+   // T800 can follow Sarah Connor by car and motorcycle
+
+
+
+   // So let's create the t1000
+
+   var T1000 = function() {
+
        return {
-           openADoor: openADoor
+           changeHandIntoThing: changeHandIntoThing,
+           runWithPowerLegs: runWithPowerLegs,
+           changeArmIntoKnife: changeArmIntoKnife
        }
 
-       function openADoor() {
-           return "Blow the f*cking door with an explosive arrow";
+       function changeHandIntoThing(thing) {
+           return "T1000 transforms his hand into " + thing;
+       }
+
+       function runWithPowerLegs() {
+           return "T1000 runs at 100mph";
+       }
+
+       function changeArmIntoKnife() {
+           return "T1000 transforms his hand into knife";
        }
    }
 
-   function Neo() {
+   // So t1000 can do much more things that T800
+
+   var t1000 = new T1000();
+
+   console.log(t1000.changeHandIntoThing("mace"));
+   // T1000 transforms his hand into mace
+   console.log(t1000.runWithPowerLegs());
+   // T1000 runs at 100mph
+   console.log(t1000.changeArmIntoKnife());
+   // T1000 transforms his hand into knife
+
+
+   function T1000Adapter() {
+       var t1000 = new T1000();
+
        return {
-           openADoor: openADoor
-       }
+           openADoor: openADoor,
+           breakAGlass: breakAGlass,
+           pursueSarahConnor: pursueSarahConnor
+       };
+
 
        function openADoor() {
-           return "There is no door to open";
+           return  t1000.changeHandIntoThing("key") + " and open the door";
+       }
+
+       function breakAGlass() {
+           return t1000.changeArmIntoKnife() + " and slices the glass";
+       }
+
+       function pursueSarahConnor() {
+           return t1000.runWithPowerLegs() + " and catch Sarah Connor"
        }
    }
 
-   // And now, create three doors and open them with the three characters
+   var t1000Adapter = new T1000Adapter();
 
-    var door1 = new Door();
-    var door2 = new Door();
-    var door3 = new Door();
+   console.log(t1000Adapter.openADoor());
+   // T1000 transforms his hand into key and open the door
+   console.log(t1000Adapter.breakAGlass());
+   // T1000 transforms his hand into knife and slices the glass
+   console.log(t1000Adapter.pursueSarahConnor());
+   // T1000 runs at 100mph and catch Sarah Connor
 
-    door1.whoIsInFrontOfMe( new Gandalf() );
-    door2.whoIsInFrontOfMe( new Rambo() );
-    door3.whoIsInFrontOfMe( new Neo() );
-
-    console.log(door1.openMe())
-    console.log(door2.openMe())
-    console.log(door3.openMe())
 
 </script>
 
