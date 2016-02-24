@@ -70,14 +70,17 @@ Factory pattern! This is one of the favourites of [Markel Arizaga](https://marke
     
         // Right we'll start
     
-        var canIBuyASuperPremiumTicket = new YouAsABuyerOfTicketsFactory().buyTicket({
+        var canIBuyASuperPremiumTicket = new YouAsABuyerOfTicketsFactory()
+        .buyTicket({
             typeOfCinema: "PremiumTicket",
             price: 50
         })
     
         console.log("Can i buy the ticket in this cinema?");
         console.log(canIBuyASuperPremiumTicket);
-        console.log("Are you kidding me? Who is going to pay " + canIBuyASuperPremiumTicket.price  +" bucks for a movie?")
+        console.log("Are you kidding me? Who is going to pay " 
+                    + canIBuyASuperPremiumTicket.price 
+                    + " bucks for a movie?")
     
         var canIBuyRegularTicket = new YouAsABuyerOfTicketsFactory().buyTicket({
             typeOfCinema: "RegularTicket",
@@ -95,7 +98,8 @@ Factory pattern! This is one of the favourites of [Markel Arizaga](https://marke
     
         console.log("Can i buy the ticket in this cinema?");
         console.log(canIBuyCheapTicket);
-        console.log("No way I don't want to go to a cinema in which " +canIBuyCheapTicket.row);
+        console.log("No way I don't want to go to a cinema in which " 
+                    +canIBuyCheapTicket.row);
     
         var canIBuyRegularTicket2 = new YouAsABuyerOfTicketsFactory().buyTicket({
             typeOfCinema: "RegularTicket",
