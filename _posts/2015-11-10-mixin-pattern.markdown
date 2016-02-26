@@ -79,7 +79,8 @@ Mixins! Love that name, you now? Mixins are something I love in Javascript devel
             heroFemale.equipement();
             heroFemale.special();
         
-            // And now we add the second mixin to the second hero class builder with all the functions
+            // And now we add the second mixin to the second hero 
+            // class builder with all the functions
             addMixin(AnotherHero, ScifiHero);
         
             // and create the second hero
