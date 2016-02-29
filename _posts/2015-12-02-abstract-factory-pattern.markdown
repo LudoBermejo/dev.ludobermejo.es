@@ -73,17 +73,37 @@ Ok, I think this can be explain with a little example. Let's try it!
         childs: "No way"
     })
     console.log(JSON.stringify(giveMeACinemaTicket));
-    // returns {"movie":"Star wars VIII","canChangeSeats":false,"row":"more or less centered","seat":"crick creator","childs":"No way"}
-
+    /* returns 
+        {
+            "movie": "Star wars VIII",
+            "canChangeSeats": false,
+            "row": "more or less centered",
+            "seat": "crick creator",
+            "childs": "No way"
+        }
+    */
+    
     var giveMeAConcertTicket = AbstractTickerBuyerFactory.getTicket("concert", {
     })
     console.log(JSON.stringify(giveMeAConcertTicket));
-    // returns {"artist":"Skrillex","date":"Only on christmas","where":"Tokyo stadium"}
+    /* returns 
+        {
+        	"artist": "Skrillex",
+        	"date": "Only on christmas",
+        	"where": "Tokyo stadium"
+        }
+    */
 
     var giveMeAWrestlingTicket = AbstractTickerBuyerFactory.getTicket("wrestling", {
         combat: "Resurrected Ultimate warrior resurrected VS Old boy Hulk Hogan"
     })
     console.log(JSON.stringify(giveMeAWrestlingTicket));
-    // returns "row":"more or less centered","seat":"crick creator","combat":"Last warrior resurrected VS Old boy Hulk Hogan"}
+    /* returns 
+        {
+        	"row": "more or less centered",
+        	"seat": "crick creator",
+        	"combat": "Last warrior resurrected VS Old boy Hulk Hogan"
+        }
+    */
 
 Easy, right? We just add the type of object we need, and we do it in execution time. Sweet! This is great use of Factory. But remember: the class must do only one thing. This kind of pattern is great but you can go to the "multiple behaviours by multiple type of objects". Just say no! It's a bad practice and it would convert your code in hell :)
