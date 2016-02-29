@@ -5,7 +5,7 @@ date:   2016-02-29 10:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/adapter_pattern.jpg"
+cover:  "assets/flyweight_pattern.jpg"
 ---
 
 The Flyweight pattern starts with a very specific hypothesis: you can save memory by reusing identical data in multiple objects. This idea could be strange in a world with gbs of RAM; but in the last few years we are using ever growing interfaces, with more and more objects. Think on a mail webapp, like gmail. It has an interface with lots of rows, and each one of them has elements in common: colors, behaviours, etc. You can store every duplicated element or make a "common element object" and points it to the rows. That's what we do with the flyweight pattern: we make objects that share common data between different objects. Those objects must be instantiated only one time, and must be not modified during the execution, so you can guarantee that object will be the same for every other object that needs it.
