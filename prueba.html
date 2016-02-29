@@ -3,110 +3,233 @@
 
 <script>
 
+   /**
+    First of all, we define what is our common data layer.
 
-   // So let's create the t800
+    In this case, we create a common data layer with three elements:
 
-    var T800 = function() {
+    Affiliation
+    Class
+    Rank
+   */
 
-        return {
-            openADoor: openADoor,
-            breakAGlass: breakAGlass,
-            pursueSarahConnor: pursueSarahConnor
-        }
-
-        function openADoor() {
-            return "T800 open the doors by crushing cars into them";
-        }
-
-        function breakAGlass() {
-            return "T800 can break a glass by pushing it with his bare hands";
-        }
-
-        function pursueSarahConnor() {
-            return "T800 can follow Sarah Connor by car and motorcycle";
-        }
-    }
-
-    // So t800 can do lot's of things:
-
-    var t800 = new T800();
-
-   console.log(t800.openADoor());
-   // T800 open the doors by crushing cars into them
-   console.log(t800.breakAGlass());
-   // T800 can break a glass by pushing it with his bare hands
-   console.log(t800.pursueSarahConnor());
-   // T800 can follow Sarah Connor by car and motorcycle
-
-
-
-   // So let's create the t1000
-
-   var T1000 = function() {
-
+   function FlyweightSaintSeiyaKnight(affiliation, classOfKnight, rank  ) {
+       var affiliation = affiliation;
+       var classOfKnight = classOfKnight;
+       var rank = rank;
        return {
-           changeHandIntoThing: changeHandIntoThing,
-           runWithPowerLegs: runWithPowerLegs,
-           changeArmIntoKnife: changeArmIntoKnife
-       }
-
-       function changeHandIntoThing(thing) {
-           return "T1000 transforms his hand into " + thing;
-       }
-
-       function runWithPowerLegs() {
-           return "T1000 runs at 100mph";
-       }
-
-       function changeArmIntoKnife() {
-           return "T1000 transforms his hand into knife";
-       }
-   }
-
-   // So t1000 can do much more things that T800
-
-   var t1000 = new T1000();
-
-   console.log(t1000.changeHandIntoThing("mace"));
-   // T1000 transforms his hand into mace
-   console.log(t1000.runWithPowerLegs());
-   // T1000 runs at 100mph
-   console.log(t1000.changeArmIntoKnife());
-   // T1000 transforms his hand into knife
-
-
-   function T1000Adapter() {
-       var t1000 = new T1000();
-
-       return {
-           openADoor: openADoor,
-           breakAGlass: breakAGlass,
-           pursueSarahConnor: pursueSarahConnor
+           get: get
        };
 
-
-       function openADoor() {
-           return  t1000.changeHandIntoThing("key") + " and open the door";
-       }
-
-       function breakAGlass() {
-           return t1000.changeArmIntoKnife() + " and slices the glass";
-       }
-
-       function pursueSarahConnor() {
-           return t1000.runWithPowerLegs() + " and catch Sarah Connor"
+       function get() {
+           return "\n   Affiliation: " + affiliation
+                + "\n   Class of knight:" + classOfKnight
+                + "\n   Rank:" + rank
        }
    }
 
-   var t1000Adapter = new T1000Adapter();
+   /**
+    * Now we declare a factory that would create a list of commons data.
+    *
+    * It will create a new object for every different
+    * Affiliation + class + rank
+    *
+    * @type {Function}
+    */
+   var FlyweightSaintSeiyaKnightFactory = ( function() {
 
-   console.log(t1000Adapter.openADoor());
-   // T1000 transforms his hand into key and open the door
-   console.log(t1000Adapter.breakAGlass());
-   // T1000 transforms his hand into knife and slices the glass
-   console.log(t1000Adapter.pursueSarahConnor());
-   // T1000 runs at 100mph and catch Sarah Connor
+       var saintSeiyaKnights = [];
 
+       return {
+           get: get
+       }
+
+       function get(affiliation, classOfKnight, rank  ) {
+           if(!saintSeiyaKnights[affiliation + "-"
+               + classOfKnight + "-" + rank]) {
+                    saintSeiyaKnights[affiliation + "-"
+                    + classOfKnight + "-" + rank] =
+                        new FlyweightSaintSeiyaKnight (
+                            affiliation, classOfKnight, rank
+                    )
+           }
+           return saintSeiyaKnights[affiliation
+                                    + "-"
+                                    + classOfKnight
+                                    + "-" + rank];
+       }
+
+   })
+
+   /**
+    * Now we define a knight. It must have:
+    *
+    * @param name
+    * @param cloth
+    * @param affiliation
+    * @param classOfKnight
+    * @param rank
+    *
+    * and it can return all data (personal and common)
+    *
+    * @returns {{get: get}}
+    * @constructor
+    */
+   var SaintSeiyaKnight = function (
+           name, cloth, affiliation, classOfKnight, rank
+   ) {
+       var commonData = FlyweightSaintSeiyaKnightFactory()
+                        .get(affiliation, classOfKnight, rank);
+       var cloth = cloth;
+       var name = name;
+
+       return {
+           get: get
+       }
+
+       function get() {
+           return "Knight " + name
+                   + " wears " + cloth
+                   + ".\nCommon data " + commonData.get()
+       }
+   }
+
+   /**
+    *
+    * Finally we create a list that can add a new knight,
+    * and can return all the data of all knights
+    *
+    * @returns {{add: add, get: get}}
+    * @constructor
+    */
+   var SaintSeiyaKnightList = function() {
+       var listOfKnights = [];
+       return {
+           add: add,
+           get: get
+       }
+       function add(name, cloth, affiliation, classOfKnight, rank) {
+           listOfKnights[name] = new SaintSeiyaKnight(
+                   name, cloth, affiliation, classOfKnight, rank
+           );
+       }
+
+       function get() {
+           for(var i in listOfKnights) {
+               console.log(listOfKnights[i].get()+ "\n\n");
+           }
+       }
+   }
+
+
+   // So let's start
+   var list = new SaintSeiyaKnightList();
+
+   // Bronze
+   list.add("Dragon Shiryū", "Dragon Cloth",
+           "Athena", "Saints", "Bronze Saints");
+   list.add("Phoenix Ikki", "Phoenix Cloth",
+           "Athena", "Saints", "Bronze Saints");
+
+   // Silver
+   list.add("Crane Yuzuriha", "Crane Cloth",
+           "Athena", "Saints", "Silver Saints");
+   list.add("Eagle Marin", "Eagle Cloth",
+           "Athena", "Saints", "Silver Saints");
+
+   // Gold
+   list.add("Libra Dohko", "Libra Cloth",
+           "Athena", "Saints", "Gold Saints");
+   list.add("Aries Mū", "Aries Cloth",
+           "Athena", "Saints", "Gold Saints");
+
+   // Hades terrestrial
+   list.add("Deep Niobe", "Deep Surplice",
+           "Hades", "Specters", "Terrestrial Star Specters");
+   list.add("Papillon Myu", "Papillon Surplice",
+           "Hades", "Specters", "Terrestrial Star Specters");
+
+   // Hades celestial
+   list.add("Griffon Minos", "Griffon Surplice",
+           "Hades", "Specters", "Celestial Star Specters");
+   list.add("Garuda Aiacos", "Garuda Surplice",
+           "Hades", "Specters", "Celestial Star Specters");
+
+   // Let's see what we get:
+    list.get();
+
+   /**
+    * It returns
+
+    Knight Dragon ShiryÅ« wears Dragon Cloth.
+    Common data
+    Affiliation: Athena
+    Class of knight:Saints
+    Rank:Bronze Saints
+
+
+    Knight Phoenix Ikki wears Phoenix Cloth.
+    Common data
+    Affiliation: Athena
+    Class of knight:Saints
+    Rank:Bronze Saints
+
+
+    Knight Crane Yuzuriha wears Crane Cloth.
+    Common data
+    Affiliation: Athena
+    Class of knight:Saints
+    Rank:Silver Saints
+
+
+    Knight Eagle Marin wears Eagle Cloth.
+    Common data
+    Affiliation: Athena
+    Class of knight:Saints
+    Rank:Silver Saints
+
+
+    Knight Libra Dohko wears Libra Cloth.
+    Common data
+    Affiliation: Athena
+    Class of knight:Saints
+    Rank:Gold Saints
+
+
+    Knight Aries MÅ« wears Aries Cloth.
+    Common data
+    Affiliation: Athena
+    Class of knight:Saints
+    Rank:Gold Saints
+
+
+    Knight Deep Niobe wears Deep Surplice.
+    Common data
+    Affiliation: Hades
+    Class of knight:Specters
+    Rank:Terrestrial Star Specters
+
+
+    Knight Papillon Myu wears Papillon Surplice.
+    Common data
+    Affiliation: Hades
+    Class of knight:Specters
+    Rank:Terrestrial Star Specters
+
+
+    Knight Griffon Minos wears Griffon Surplice.
+    Common data
+    Affiliation: Hades
+    Class of knight:Specters
+    Rank:Celestial Star Specters
+
+
+    Knight Garuda Aiacos wears Garuda Surplice.
+    Common data
+    Affiliation: Hades
+    Class of knight:Specters
+    Rank:Celestial Star Specters
+     */
 
 </script>
 
