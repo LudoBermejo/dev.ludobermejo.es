@@ -102,7 +102,7 @@ Ok, I think this can be explain with a little example. Let's try it!
         {
         	"row": "more or less centered",
         	"seat": "crick creator",
-        	"combat": "Ultimate warrior resurrected VS Old boy Hulk Hogan"
+        	"combat": "Resurrected Ultimate warrior resurrected VS Old boy Hulk Hogan"
         }
     */
 
