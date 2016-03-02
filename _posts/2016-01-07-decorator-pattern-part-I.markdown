@@ -40,7 +40,9 @@ Ok, that's easy, right? Just an animal. But what if we want to be a... kung-fu p
     KungfuBear.prototype = Object.create(Animal.prototype);
 
     console.log(KungfuBear);
-    var kungfuPanda = new KungfuBear("Panda", "Bear", [ "Twelve Impossible Moves", "Nerve attack"]);
+    var kungfuPanda = new KungfuBear("Panda", "Bear", [ 
+        "Twelve Impossible Moves", "Nerve attack"
+    ]);
     console.log(kungfuPanda);
 
 Ok, that's a subclass. Now let's find the problem. So imagine, I don't know, you want another type of bear. Just, I don't know... ok, `Yogui bear`. What's then? Do we create a subclass called "cartoon bear", and then another subclass for the kungfuBear. That's will do the trick, yeah, but imagine doing that in a full project... pain! PAIINNNN!
@@ -82,7 +84,8 @@ So what's about decorators? First, let me explain that the following code is the
         /** This is the result:
          *
          *  Kungfu panda
-         * "{"name":"Panda","family":"Bear","isCartoon":true,"moves":["Twelve Impossible Moves","Nerve attack"]}"
+         * "{"name":"Panda","family":"Bear","isCartoon":true,"moves":
+            ["Twelve Impossible Moves","Nerve attack"]}"
          *
          *  Yogui bear
          * "{"name":"Grizzly","family":"Bear","isCartoon":true}"
