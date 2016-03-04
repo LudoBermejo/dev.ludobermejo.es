@@ -17,10 +17,12 @@ I don't know if you are familiar with the concept of `interface`. It's a basic t
 Now, for use this, we need first to create an Interface class. I will copy the code from stackoverflow because it is a very simple code. I'll add comments where I think the code is unclear.
 
 
-    // First we create the interface: a name and a list of methods that the object must have to be approved
+    // First we create the interface: a name and a list of methods that the object must have 
+    // to be approved
     var Interface = function(name, methods) {
         if (arguments.length != 2) {
-            throw new Error("Interface constructor called with " + arguments.length + "arguments, but expected exactly 2.");
+            throw new Error("Interface constructor called with " 
+                            + arguments.length + "arguments, but expected exactly 2.");
         }
     
         this.name = name;
@@ -28,17 +30,21 @@ Now, for use this, we need first to create an Interface class. I will copy the c
     
         for (var i = 0, len = methods.length; i < len; i++) {
             if (typeof methods[i] !== 'string') {
-                throw new Error("Interface constructor expects method names to be " + "passed in as a string.");
+                throw new Error("Interface constructor expects method names to be " 
+                                + "passed in as a string.");
             }
     
             this.methods.push(methods[i]);
         }
     };
     
-    // Then we create a function that checks an object with the methods that must have. If the object doesn't have the methods, then it throws an error.
+    // Then we create a function that checks an object with the methods that must have. 
+    // If the object doesn't have the methods, then it throws an error.
+    
     Interface.ensureImplements = function(object) {
         if (arguments.length < 2) {
-            throw new Error("Function Interface.ensureImplements called with " + arguments.length + "arguments, but expected at least 2.");
+            throw new Error("Function Interface.ensureImplements called with " 
+                            + arguments.length + "arguments, but expected at least 2.");
         }
     
             
@@ -46,14 +52,17 @@ Now, for use this, we need first to create an Interface class. I will copy the c
             var interface = arguments[i];
     
             if (interface.constructor !== Interface) {
-                throw new Error("Function Interface.ensureImplements expects arguments" + "two and above to be instances of Interface.");
+                throw new Error("Function Interface.ensureImplements expects arguments" 
+                                + "two and above to be instances of Interface.");
             }
     
             for (var j = 0, methodsLen = interface.methods.length; j < methodsLen; j++) {
                 var method = interface.methods[j];
     
                 if (!object[method] || typeof object[method] !== 'function') {
-                    throw new Error("Function Interface.ensureImplements: object " + "does not implement the " + interface.name + " interface. Method " + method + " was not found.");
+                    throw new Error("Function Interface.ensureImplements: object " 
+                        + "does not implement the " + interface.name + " interface. Method " 
+                        + method + " was not found.");
                 }
             }
         }
@@ -63,10 +72,12 @@ Now, for use this, we need first to create an Interface class. I will copy the c
 Ok, now let's check the example
 
 
-    // First we create the interface: a name and a list of methods that the object must have to be approved
+    // First we create the interface: a name and a list of methods 
+    // that the object must have to be approved
     var Interface = function(name, methods) {
         if (arguments.length != 2) {
-            throw new Error("Interface constructor called with " + arguments.length + "arguments, but expected exactly 2.");
+            throw new Error("Interface constructor called with " 
+                            + arguments.length + "arguments, but expected exactly 2.");
         }
 
         this.name = name;
@@ -74,17 +85,23 @@ Ok, now let's check the example
 
         for (var i = 0, len = methods.length; i < len; i++) {
             if (typeof methods[i] !== 'string') {
-                throw new Error("Interface constructor expects method names to be " + "passed in as a string.");
+                throw new Error("Interface constructor expects method names to be " 
+                                + "passed in as a string.");
             }
 
             this.methods.push(methods[i]);
         }
     };
 
-    // Then we create a function that checks an object with the methods that must have. If the object doesn't have the methods, then it throws an error.
+    // Then we create a function that checks an object with the methods that must have. 
+    
+    // If the object doesn't have the methods, then it throws an error.
+    
+    
     Interface.ensureImplements = function(object) {
         if (arguments.length < 2) {
-            throw new Error("Function Interface.ensureImplements called with " + arguments.length + "arguments, but expected at least 2.");
+            throw new Error("Function Interface.ensureImplements called with " 
+                            + arguments.length + "arguments, but expected at least 2.");
         }
 
 
@@ -92,21 +109,26 @@ Ok, now let's check the example
             var interface = arguments[i];
 
             if (interface.constructor !== Interface) {
-                throw new Error("Function Interface.ensureImplements expects arguments" + "two and above to be instances of Interface.");
+                throw new Error("Function Interface.ensureImplements expects arguments" 
+                                + "two and above to be instances of Interface.");
             }
 
             for (var j = 0, methodsLen = interface.methods.length; j < methodsLen; j++) {
                 var method = interface.methods[j];
 
                 if (!object[method] || typeof object[method] !== 'function') {
-                    throw new Error("Function Interface.ensureImplements: object " + "does not implement the " + interface.name + " interface. Method " + method + " was not found.");
+                    throw new Error("Function Interface.ensureImplements: object "
+                                    + "does not implement the " + interface.name 
+                                    + " interface. Method " + method + " was not found.");
                 }
             }
         }
     };
 
 
-    // First we define an interface (name and methods). That's the minimal methods that any object needs to have.
+    // First we define an interface (name and methods). 
+    // That's the minimal methods that any object needs to have.
+    
     var SpaceShipInterface = new Interface('Spaceship', [ 'fly', 'flyInSpace' ]);
 
 
@@ -122,7 +144,8 @@ Ok, now let's check the example
 
 
 
-    // Now i'm creating star wars space ship decorator. It only works if the passed object can fly and flyinspace
+    // Now i'm creating star wars space ship decorator. 
+    // It only works if the passed object can fly and flyinspace
     var StarwarsSpaceShipDecorator = function(ship) {
         Interface.ensureImplements(ship, SpaceShipInterface);
         ship.goHyperspace =  function() {
@@ -141,7 +164,8 @@ Ok, now let's check the example
 
     StarwarsSpaceShipDecorator(starwarsShip);
  
-    // Everything's ok, the object can fly, fly in space, go into hyperspace and fire phasers
+    // Everything's ok, the object can: 
+    // fly, fly in space, go into hyperspace and fire phasers
     console.log(starwarsShip);
 
     // Now I'm creating a airplane
@@ -157,7 +181,9 @@ Ok, now let's check the example
     StarwarsSpaceShipDecorator(airplane);
 
     // But ey, it doesn't work! It give us:
-    // Uncaught Error: Function Interface.ensureImplements: object does not implement the Spaceship interface. Method flyInSpace was not found.
+    // Uncaught Error: Function Interface.ensureImplements: 
+    // object does not implement the Spaceship interface. 
+    // Method flyInSpace was not found.
 
 
 Great! Now I think this is much clear now, right? You can combine this with prototypes and it will be even better :)
