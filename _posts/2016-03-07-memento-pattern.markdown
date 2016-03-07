@@ -5,7 +5,7 @@ date:   2016-03-07 10:30:00
 author: Ludo Bermejo
 categories: Patterns 
 tags:	patterns 
-cover:  "assets/flyweight_pattern.jpg"
+cover:  "assets/memento_pattern.jpg"
 ---
 
 Today we will see the `Memento pattern`, one partially-unknown pattern that we can use to solve some problems in modern developments.
