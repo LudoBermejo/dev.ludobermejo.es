@@ -17,6 +17,7 @@ I don't know if you are familiar with the concept of `interface`. It's a basic t
 Now, for use this, we need first to create an Interface class. I will copy the code from stackoverflow because it is a very simple code. I'll add comments where I think the code is unclear.
 
 
+
     // First we create the interface: a name and a list of methods that the object must have 
     // to be approved
     var Interface = function(name, methods) {
