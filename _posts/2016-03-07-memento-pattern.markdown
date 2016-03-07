@@ -299,6 +299,6 @@ The final result is:
     "size":"Normal size","hairUp":false,"increasedMuscles":false}
  
  
- # Conclusion
+# Conclusion
  
  Can you see what happened here? I created a repository of forms that can stack forms so we can retrieve the last form by removing it from the stack. It's the most primitive way of storing history, but it can explain how you can make your own history objects. And that, friends, is one of this things that *everybody* take it for granted.
