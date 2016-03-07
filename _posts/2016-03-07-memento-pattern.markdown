@@ -153,8 +153,8 @@ Let's start!
     );
     console.log(Goku.getActualForm().getJSON());
 
-    console.log("After he finish Piccollo, he goes to bed. But at dawn someone punches him. It's Vegeta! " +
-            "They start fighting and Goku transforms again in a false Saiyan!");
+    console.log("After he finish Piccollo, he goes to bed. But at dawn someone punches him. " +
+            "It's Vegeta! They start fighting and Goku transforms again in a false Saiyan!");
     Goku.changeForm(
             GokuForm(
                     "False saiyan",
@@ -166,8 +166,9 @@ Let's start!
     );
     console.log(Goku.getActualForm().getJSON());
 
-    console.log("After he finish Vegeta, he goes to have breakfast. But their beans transform into Freeza!!" +
-            "Again, Goku transforms himself, this time in Super Saiyan!");
+    console.log("After he finish Vegeta, he goes to have breakfast. But their beans " +
+            "transform into Freeza!! Again, Goku transforms himself, " +
+            "this time in Super Saiyan!");
     Goku.changeForm(
             GokuForm(
                     "Super saiyan",
@@ -179,9 +180,9 @@ Let's start!
     );
     console.log(Goku.getActualForm().getJSON());
 
-    console.log("All this combats and no breakfast at all. He goes to a bar but the bartender doesn't " +
-            "want to feed him. That's because he is Cell! Goku is a little angry so " +
-            "he transforms himself into Full-power Super Saiyan");
+    console.log("All this combats and no breakfast at all. He goes to a bar " +
+            "but the bartender doesn't want to feed him. That's because he is Cell! " +
+            "Goku is a little angry so he transforms himself into Full-power Super Saiyan");
     Goku.changeForm(
             GokuForm(
                     "Full power super saiyan",
@@ -206,12 +207,13 @@ Let's start!
             )
     );
     console.log(Goku.getActualForm().getJSON());
-    console.log("Then he founds an orange-tree and he eat some oranges. That makes he calm down " +
-            "and he fell asleep, still in golden form");
+    console.log("Then he founds an orange-tree and he eat some oranges. " +
+            "That makes he calm down and he fell asleep, still in golden form");
     Goku.restoreForm();
     console.log(Goku.getActualForm().getJSON());
 
-    console.log("After that we fell asleep and he reverts its form to Full power Super saiyan");
+    console.log("After that we fell asleep and he reverts its form to " +
+            "Full power Super saiyan");
     Goku.restoreForm();
     console.log(Goku.getActualForm().getJSON());
 
@@ -231,6 +233,7 @@ Let's start!
     console.log("The next morning he awakes normal again.");
     Goku.restoreForm();
     console.log(Goku.getActualForm().getJSON());
+
 
 
     
