@@ -156,33 +156,33 @@ What will be the final number of superman powers now?
 
 Yes! This variable will be undefined outside the for block! This is **awesome**! And why is awesome? Because of the typical problem of the closures. Let's do an usual problem:
 
-      var users = [
-            { name: "ludo" },
-            { name: "john" },
-            { name: "jaume" }]
+    var users = [
+        { name: "ludo" },
+        { name: "john" },
+        { name: "jaume" }]
     
-        for(var i=0;i<=users.length-1;i++) {
+    for(var i=0;i<=users.length-1;i++) {
     
-            // let's imagine we call an ajax load. It will delay the assignation 100 milliseconds
-            function dataOfUserLoaded() {
-                setTimeout(function() {
-                    users[i].id = i;
-                },100)
-            }
-    
-            dataOfUserLoaded();
+        // let's imagine we call an ajax load. It will delay the assignation 100 milliseconds
+        function dataOfUserLoaded() {
+            setTimeout(function() {
+                users[i].id = i;
+            },100)
         }
     
-        // And now we wait 500 milliseconds to check the result
-        setTimeout(function() {
-            console.log(JSON.stringify(users));
-        },500)
+        dataOfUserLoaded();
+    }
+    
+    // And now we wait 500 milliseconds to check the result
+    setTimeout(function() {
+        console.log(JSON.stringify(users));
+    },500)
         
 What is the result of this?
         
-            Uncaught TypeError: Cannot set property 'id' of undefined(anonymous function) @ prueba.html:16
-            [{"name":"ludo"},{"name":"john"},{"name":"jaume"}]
-            
+    Uncaught TypeError: Cannot set property 'id' of undefined(anonymous function) @ prueba.html:16
+    [{"name":"ludo"},{"name":"john"},{"name":"jaume"}]
+    
 And why is that? Because when the program ends the loading, the variable is 3. That's because the for is ended. 
  
 But now... what if we use the let?
