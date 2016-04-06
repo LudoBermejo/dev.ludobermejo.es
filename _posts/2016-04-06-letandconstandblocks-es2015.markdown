@@ -5,7 +5,7 @@ date:   2016-04-06 10:30:00
 author: Ludo Bermejo
 categories: ES2015 
 tags:	es2015
-cover:  "assets/memento_pattern.jpg"
+cover:  "assets/letandconstandblock.jpg"
 ---
 
 Hi all! I have started to learn ES2015 or ES6, the new & shinny version of Javascript. It has lots of improvements and I'll use this blog to write about them for future reference. If you find this useful, then I will be glad :)
