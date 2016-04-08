@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Arrow functions"
-date:   2016-04-06 10:30:00
+date:   2016-04-07 10:30:00
 author: Ludo Bermejo
 categories: ES2015 
 tags:	es2015
