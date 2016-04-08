@@ -2,15 +2,14 @@
 <body>
 
 <script>
-    const whoIsClarkKent = "Superman";
-    if(whoIsClarkKent  == "Superman")
-    {
-        const whoIsClarkKent = "Batman";
-        console.log(whoIsClarkKent);
-    }
-    console.log("Really? Can you tell me who clark kent is?");
-    console.log("ok he is " + whoIsClarkKent);
 
+    var giveMeMyShip = name => name=="Han solo"?"Millenium falcon":"No idea";
+
+    var showNameOfShipsByNameOfOwner = function(ship = giveMeMyShip(nameOfOwner), nameOfOwner = "Han solo") {
+        console.log(ship)
+    }
+
+    showNameOfShipsByNameOfOwner(undefined, "Han solo");
 
 </script>
 
