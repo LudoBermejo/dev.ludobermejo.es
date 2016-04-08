@@ -5,8 +5,8 @@ date:   2016-04-07 10:30:00
 author: Ludo Bermejo
 categories: ES2015 
 tags:	es2015
-cover:  "assets/letandconstandblock.jpg"
----
+cover:  "assets/arrowfunctions.jpg"
+-----------------------------------
 
 Oh dear! Arrow functions was one of the more controversial updates of the ECMA6. Or at least, one of the most popularized discussion. Are they [Syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) or are they really useful? Spoiler: IMMO they are useful and have some things awesome, but you can convert your code in a hell if you don't have enough care.
  
