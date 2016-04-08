@@ -1,13 +1,30 @@
 <html>
 <body>
 
+<input type="button" id="BluePill" value="Take the blue pill">
+<input type="button" id="RedPill" value="Take the red pill">
+
 <script>
     'use strict';
-    var takeAPill = pill => pill=="Blue"?"Continue with your live, Neo":"Become the chosen one";
-    console.log(takeAPill("Blue"));
-    console.log(takeAPill("Red"));
+
+    var neoDecision = {
+        decision: "",
+        takeAPill: pill => pill=="Blue"?"Continue with your live, Neo":"Become the chosen one",
+        init: function() {
+            document.getElementById("BluePill").addEventListener('click', () => {
+                console.log(this.takeAPill("Blue"));
+            })
+
+            document.getElementById("RedPill").addEventListener('click',  () => {
+                console.log(this.takeAPill("Blue"));
+            })
+        }
+    }
+
+    neoDecision.init();
 
 </script>
+
 
 </body>
 
