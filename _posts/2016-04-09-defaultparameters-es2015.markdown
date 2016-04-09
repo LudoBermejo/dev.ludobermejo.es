@@ -113,7 +113,8 @@ You can even do strange thinks like:
  
     var giveMeMyShip = name => name=="Han solo"?"Millenium falcon":"No idea";
     
-    var showNameOfShipsByNameOfOwner = function(nameOfOwner = "Han solo", ship = giveMeMyShip(nameOfOwner)) {
+    var showNameOfShipsByNameOfOwner = function
+        (nameOfOwner = "Han solo", ship = giveMeMyShip(nameOfOwner)) {
         console.log(ship)
     }
 
@@ -149,7 +150,8 @@ But, what if we do it in the other order? What will happend if we use this code?
           
     var giveMeMyShip = name => name=="Han solo"?"Millenium falcon":"No idea";
     
-    var showNameOfShipsByNameOfOwner = function(ship = giveMeMyShip(nameOfOwner), nameOfOwner = "Han solo") {
+    var showNameOfShipsByNameOfOwner = function
+        (ship = giveMeMyShip(nameOfOwner), nameOfOwner = "Han solo") {
       console.log(ship)
     }
 
