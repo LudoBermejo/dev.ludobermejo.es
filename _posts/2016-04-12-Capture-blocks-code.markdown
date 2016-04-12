@@ -5,10 +5,10 @@ date:   2016-04-12 10:30:00
 author: Ludo Bermejo
 categories: ES2015 
 tags:	es2015
-cover:  "assets/default_parameters.jpg"
+cover:  "assets/CodeBlocksCapture.jpg"
 ---
 
-Just a quick update to show you my new tool. You may know the difficulties that every developer on linkedin: you can't put a valid block of code because Linkedin doesn't have styles for them. So you can only do two things:
+Just a quick update to show you a new tool I'm working on. You may know the difficulties that every developer on linkedin: you can't put a valid block of code because Linkedin doesn't have styles for them. So you can only do two things:
  
 - Put the code in cursive or similar style
 - Put an image instead the code
