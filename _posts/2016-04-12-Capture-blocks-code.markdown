@@ -3,8 +3,8 @@ layout: post
 title:  "Capture blocks code: the project"
 date:   2016-04-12 10:30:00
 author: Ludo Bermejo
-categories: ES2015 
-tags:	es2015
+categories:  javascript 
+tags:	javascript
 cover:  "assets/CodeBlocksCapture.jpg"
 ---
 
