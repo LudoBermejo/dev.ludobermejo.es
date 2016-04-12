@@ -6,7 +6,7 @@ author: Ludo Bermejo
 categories: ES2015 
 tags:	es2015
 cover:  "assets/default_parameters.jpg"
-----------------------------------------
+---
 
 Ok this may be kind of absurd for many developers, but javascript didn't have default parameters in functions. Our usual code usually includes something similar to this:
 
