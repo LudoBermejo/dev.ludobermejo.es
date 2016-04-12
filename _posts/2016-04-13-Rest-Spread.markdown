@@ -24,9 +24,10 @@ Let's start with an example:
         }
     }
     
-    gremlinsFamily("Gizmo", "Stripe", "Electricity Gremlin", "Shredder Gremlin", "Vegetable Gremlin",
-                  "The Gremlin Carolers","The Phantom of the Opera Gremlin", "Flashdance Gremlin",
-                  "Mohawk/Spider-Gremlin","Mugger Gremlin", "Lady Gremlina", "Brain Gremlin", "Jazzy Gremlin" )
+    gremlinsFamily("Gizmo", "Stripe", "Electricity Gremlin", "Shredder Gremlin", 
+        "Vegetable Gremlin", "The Gremlin Carolers","The Phantom of the Opera Gremlin", 
+            "Flashdance Gremlin", "Mohawk/Spider-Gremlin","Mugger Gremlin", 
+            "Lady Gremlina", "Brain Gremlin", "Jazzy Gremlin" )
 
 This will return
 
@@ -58,9 +59,10 @@ Now, let's add a second parameter:
         }
     }
     
-    gremlinsFamily("Gizmo", "Stripe", "Electricity Gremlin", "Shredder Gremlin", "Vegetable Gremlin",
-            "The Gremlin Carolers","The Phantom of the Opera Gremlin", "Flashdance Gremlin",
-            "Mohawk/Spider-Gremlin","Mugger Gremlin", "Lady Gremlina", "Brain Gremlin", "Jazzy Gremlin" )
+    gremlinsFamily("Gizmo", "Stripe", "Electricity Gremlin", "Shredder Gremlin", 
+        "Vegetable Gremlin", "The Gremlin Carolers","The Phantom of the Opera Gremlin", 
+            "Flashdance Gremlin", "Mohawk/Spider-Gremlin","Mugger Gremlin", 
+            "Lady Gremlina", "Brain Gremlin", "Jazzy Gremlin" )
             
 It will return:
             
@@ -87,9 +89,10 @@ But, what is this "children" var? Let's see it:
        console.log(children);
     }
     
-    gremlinsFamily("Gizmo", "Stripe", "Electricity Gremlin", "Shredder Gremlin", "Vegetable Gremlin",
-           "The Gremlin Carolers","The Phantom of the Opera Gremlin", "Flashdance Gremlin",
-           "Mohawk/Spider-Gremlin","Mugger Gremlin", "Lady Gremlina", "Brain Gremlin", "Jazzy Gremlin" )
+    gremlinsFamily("Gizmo", "Stripe", "Electricity Gremlin", "Shredder Gremlin", 
+        "Vegetable Gremlin", "The Gremlin Carolers","The Phantom of the Opera Gremlin", 
+            "Flashdance Gremlin", "Mohawk/Spider-Gremlin","Mugger Gremlin", 
+            "Lady Gremlina", "Brain Gremlin", "Jazzy Gremlin" )
              
 It will return
              
