@@ -5,7 +5,7 @@ date:   2016-04-12 12:30:00
 author: Ludo Bermejo
 categories: ES2015 
 tags:	es2015
-cover:  "assets/default_parameters.jpg"
+cover:  "assets/rest_and_spread.jpg"
 ---
 
 More cool things for ES2015! Today we will learn about the `Rest` and `Spread` operators in the new Javascript. Let's start!
