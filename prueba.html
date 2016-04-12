@@ -7,21 +7,13 @@
 <script>
     'use strict';
 
-    var neoDecision = {
-        decision: "",
-        takeAPill: pill => pill=="Blue"?"Continue with your live, Neo":"Become the chosen one",
-        init: function() {
-            document.getElementById("BluePill").addEventListener('click', () => {
-                console.log(this.takeAPill("Blue"));
-            })
 
-            document.getElementById("RedPill").addEventListener('click',  () => {
-                console.log(this.takeAPill("Blue"));
-            })
-        }
+
+    var spell = function (...what) {
+        console.log(what)
     }
 
-    neoDecision.init();
+    spell(..."spell","and really",..."spell");
 
 </script>
 
