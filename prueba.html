@@ -3,13 +3,15 @@
 
 <script>
 
-    var addToAnswer = function(answer) {
-        return 42-answer + answer;
+    function upperMe(template, ...expressions) {
+        return template.reduce((accumulator, part, i) => {
+            return accumulator + expressions[i - 1].toUpperCase() + part
+        })
     }
-    let theWrongAnswer = 40;
-    console.log("What's the answer to universe?");
-    console.log(`That's easy: it's ${addToAnswer(theWrongAnswer)}`);
-
+    var name = 'Luke Skywalker'
+    var father = 'Darth Vader'
+    var text = upperMe`I'm ${name} and my daddy is ${father}`
+    console.log(text)
 
 
 </script>

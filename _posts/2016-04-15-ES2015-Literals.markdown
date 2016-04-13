@@ -40,6 +40,8 @@ You only need to add this `0b` before the number to work with binary data.
 
 # Template literals
 
+## Strings substitution
+
 Ok, template in ES2015 means: "string templating with interpolating expresions or variables". If you are familiar with [Handlebars](http://handlebarsjs.com/) you may know the concept. This is an huge improvement to Javascript because it will introduce a good improvement in the templates' rendering. But... how can we do it? Let's check some examples:
  
     let theAnswer = 42;
@@ -67,9 +69,7 @@ That will return
     
 As you can see, we added 2 + 40 and the literal caught the result. This can be a great addition to our work, because we can make some weird behaviours, like:
 
-    let addToAnswer = function(answer) {
-        return 42-answer + answer;
-    }
+    let addToAnswer = answer => 42-answer + answer;
     let theWrongAnswer = 40;
     console.log("What's the answer to universe?");
     console.log(`That's easy: it's ${addToAnswer(theWrongAnswer)}`);
@@ -80,4 +80,94 @@ That will return
     That's easy: it's 42
     
 How cool is that? We can use functions into templates, so in the practique we can do wathever we want. Bye bye "+" strings!!
+
+## Multilines
+
+Remember the old days of the enters? Like:
+
+    var text = "Ok, i want to add some new lines, like\n\nthose ones. And now it seems"
+              + " I'm in \n\nMatrix\n\nor\n\nTron";
+    console.log(text);
+
+And I'll get
+        
+    Ok, i want to add some new lines, like
     
+    those ones. And now it seems I'm in 
+    
+    Matrix
+    
+    or
+    
+    Tron
+    
+Well... look at this:
+
+    var text = `Ok, i want to add some new lines, like
+                    
+    those ones. And now it seems I'm in 
+    
+    Matrix
+    
+    or
+    
+    Tron
+    `;
+
+    console.log(text);
+    
+Yes, I will get the same result:
+        
+    Ok, i want to add some new lines, like
+    
+    those ones. And now it seems I'm in 
+    
+    Matrix
+    
+    or
+    
+    Tron    
+
+Good sh*t indeed. :)
+
+## Tagged Templates
+
+This is the most difficult thing you will read in this article. `Tagged Templates` transform a `Template String` by placing a function name before the template string. 
+
+What does this means? Let's check it in here:
+
+    function upperMe(template, ...expressions) {
+        return template.reduce((accumulator, part, i) => {
+            return accumulator + expressions[i - 1].toUpperCase() + part
+        })
+    }
+    var name = 'Luke Skywalker'
+    var father = 'Darth Vader'
+    var text = upperMe`I'm ${name} and my daddy is ${father}`
+    console.log(text)
+
+It will return:
+
+    I'm LUKE SKYWALKER and my daddy is DARTH VADER
+
+Ok, what's happened there? Well, we use a function that is called with the template and the expressions. The template is an array that contents all the strings, basically:
+
+    ['I\'m', 'and my daddy is']
+     
+And the expressions have all the variables added to the template:
+     
+    ['Luke Skywalker', 'Darth Vader']
+    
+Now, what we do is a reduce (check [my previous post](http://dev.ludobermejo.es/functional/2016/02/01/functional-programming-higher-order-functions.html) that will return the strings added to the expression, but with the exppression transformed to uppercase.
+    
+You may think, and what's the value of that? Well, imagine that you want to make other calls with this arguments, like validation or sanitization of string. With this tagged templates you can do it.
+
+# Conclussions
+
+I think we will see in the future big improvements with this literals, specially in the different libraries. I'm really interested: will this improve things like Angular or Rest? Well see :)         
+        
+    
+     
+    
+
+
