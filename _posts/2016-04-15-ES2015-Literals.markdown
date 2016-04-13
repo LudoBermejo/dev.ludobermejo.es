@@ -1,0 +1,83 @@
+---
+layout: post
+title:  "ES2015 Literals (Octal, Binary and Template)"
+date:   2016-04-14 12:30:00
+author: Ludo Bermejo
+categories: ES2015 
+tags:	es2015
+cover:  "assets/rest_and_spread.jpg"
+---
+
+In the new ES2015 we have new literal's features. Today I will talk about two of this new improvements: the `Octal and Binary` literals and the `Template` literals.
+
+# Octal and Binary literals
+
+Ok, this will be quick. Let's check this:
+
+    let answer = 0o52;
+    console.log("What's the answer to universe?");
+    console.log("That's easy: it's " + answer);
+
+It will return
+
+    What's the answer to universe?
+    That's easy: it's 42
+    
+To work with an octal number, you only need to add the `0o` before the number.
+    
+Now well make the same example, with binary    
+
+    let answer = 0b00101010;
+    console.log("What's the answer to universe?");
+    console.log("That's easy: it's " + answer);
+    
+It will return
+
+    What's the answer to universe?
+    That's easy: it's 42
+        
+You only need to add this `0b` before the number to work with binary data.         
+
+# Template literals
+
+Ok, template in ES2015 means: "string templating with interpolating expresions or variables". If you are familiar with [Handlebars](http://handlebarsjs.com/) you may know the concept. This is an huge improvement to Javascript because it will introduce a good improvement in the templates' rendering. But... how can we do it? Let's check some examples:
+ 
+    let theAnswer = 42;
+    console.log("What's the answer to universe?");
+    console.log(`That's easy: it's ${theAnswer}`);    
+
+    
+It will return
+
+    What's the answer to universe?
+    That's easy: it's 42
+        
+Now how I did this. First of all, I want you to notice the specific symbol I used: \`. It's not the usual " or '. It's an specific symbol that we use for this template literals. 
+ 
+Next check the ${theAnswer}. This is similar to other template systems. The content of the ${} code can be a variable, but it can be an expression too, like:
+
+    let theWrongAnswer = 40;
+    console.log("What's the answer to universe?");
+    console.log(`That's easy: it's ${theWrongAnswer+2}`);
+
+That will return
+
+    What's the answer to universe?
+    That's easy: it's 42
+    
+As you can see, we added 2 + 40 and the literal caught the result. This can be a great addition to our work, because we can make some weird behaviours, like:
+
+    let addToAnswer = function(answer) {
+        return 42-answer + answer;
+    }
+    let theWrongAnswer = 40;
+    console.log("What's the answer to universe?");
+    console.log(`That's easy: it's ${addToAnswer(theWrongAnswer)}`);
+
+That will return
+
+    What's the answer to universe?
+    That's easy: it's 42
+    
+How cool is that? We can use functions into templates, so in the practique we can do wathever we want. Bye bye "+" strings!!
+    
