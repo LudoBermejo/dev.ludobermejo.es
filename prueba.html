@@ -1,15 +1,15 @@
 <html>
 <body>
 
-<input type="button" id="BluePill" value="Take the blue pill">
-<input type="button" id="RedPill" value="Take the red pill">
-
 <script>
-    var whosTheChosenOne = "Neo is the chosen one";
 
-    for(var letter of whosTheChosenOne) {
-        console.log(letter);
+    var addToAnswer = function(answer) {
+        return 42-answer + answer;
     }
+    let theWrongAnswer = 40;
+    console.log("What's the answer to universe?");
+    console.log(`That's easy: it's ${addToAnswer(theWrongAnswer)}`);
+
 
 
 </script>
