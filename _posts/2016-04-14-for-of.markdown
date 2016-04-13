@@ -1,0 +1,63 @@
+---
+layout: post
+title:  "For-of loops"
+date:   2016-04-14 12:30:00
+author: Ludo Bermejo
+categories: ES2015 
+tags:	es2015
+cover:  "assets/rest_and_spread.jpg"
+---
+
+This will be quick. At least we have a `for ... of` loop in Javascript. It is used in `Iterables` (we talk about them in a future post). But for know, look at this code:
+
+    var mortalKombatCharacters = ["Sub-zero", "Scorpion", "Johhny Cage", 
+            "Shang Tsung", "Raiden", "Sonya Blade", "Liu Kang", "Goro"]
+            
+    for(let name of mortalKombatCharacters) {
+        console.log(name);
+    }
+
+Will return
+    
+    Sub-zero
+    Scorpion
+    Johhny Cage
+    Shang Tsung
+    Raiden
+    Sonya Blade
+    Liu Kang
+    Goro
+    
+Let's do it with strings:
+    
+    var whosTheChosenOne = "Neo is the chosen one";
+            
+    for(let letter of whosTheChosenOne) {
+        console.log(letter);
+    }
+    
+Returns 
+    
+    N
+    e
+    o
+     
+    i
+    s
+     
+    t
+    h
+    e
+     
+    c
+    h
+    o
+    s
+    e
+    n
+     
+    o
+    n
+    e
+
+We will come back to this for...of when we talk about `iterables` and `generators`. Just wait for it! 
