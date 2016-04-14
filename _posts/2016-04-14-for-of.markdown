@@ -5,7 +5,7 @@ date:   2016-04-14 9:30:00
 author: Ludo Bermejo
 categories: ES2015 
 tags:	es2015
-cover:  "assets/rest_and_spread.jpg"
+cover:  "assets/forloop.jpg"
 ---
 
 This will be quick. At least we have a `for ... of` loop in Javascript. It is used in `Iterables` (we talk about them in a future post). But for know, look at this code:
