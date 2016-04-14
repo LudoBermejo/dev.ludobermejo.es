@@ -2,18 +2,22 @@
 <body>
 
 <script>
-
-    function upperMe(template, ...expressions) {
-        return template.reduce((accumulator, part, i) => {
-            return accumulator + expressions[i - 1].toUpperCase() + part
-        })
+    let redDragonPowers =
+    {
+        'BreathWeapon': 'A red dragon has one type of breath weapon, a cone of fire.',
+        'LocateObject': 'A juvenile or older red dragon can use this ability as the spell of the same name, once per day per age category.',
+        'SpellLikeAbilities': '3/day suggestion (old or older); 1/day find the path (ancient or older), discern location (great wyrm).',
+        'Skills': 'Appraise, Bluff, and Jump are considered class skills for red dragons.'
     }
-    var name = 'Luke Skywalker'
-    var father = 'Darth Vader'
-    var text = upperMe`I'm ${name} and my daddy is ${father}`
-    console.log(text)
 
+    let principalWeapon, customPowers;
 
+    (
+            { BreathWeapon: principalWeapon , SpellLikeAbilities: customPowers } = redDragonPowers
+    );
+
+    console.log(`The breath weapon description is ${principalWeapon}`);
+    console.log(`The skills are ${customPowers}`);
 </script>
 
 
