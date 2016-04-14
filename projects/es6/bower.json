@@ -1,0 +1,21 @@
+{
+  "name": "es6",
+  "homepage": "https://github.com/LudoBermejo/ludobermejo.github.io",
+  "authors": [
+    "Ludo Bermejo <ludo.bermejo@starzplayarabia.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "es6-module-loader": "^0.17.11",
+    "traceur": "^0.0.107"
+  }
+}
