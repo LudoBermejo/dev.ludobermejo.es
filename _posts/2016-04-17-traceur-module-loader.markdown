@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "traceur"
+title:  "traceur & module loader boilerplate"
 date:   2016-04-17 10:30:00
 author: Ludo Bermejo
 categories: ES2015 
