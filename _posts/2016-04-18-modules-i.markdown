@@ -1,0 +1,162 @@
+---
+layout: post
+title:  "Modules (I)"
+date:   2016-04-18 10:30:00
+author: Ludo Bermejo
+categories: ES2015 
+tags:	es2015
+cover:  "assets/rest_and_spread.jpg"
+---
+
+Ok, now that we have our boilerplate (see our [previous post](http://dev.ludobermejo.es/es2015/2016/04/17/traceur-module-loader.html), we can start working with `Modules`. But first is first: what is a `Module` in ES6? Ok, we use modules to cut our code into chunks that make sense together. Think of different libraries, like jquery or google maps. We load those libraries with `script` tags and we use them. Think of modules in a similar way, but for the same app (your app).
+
+You maybe be familiar with the most famous module javascript libraries: CommonJS (NodeJS use them) and AMD (RequireJS' style). CommonJS is mostly used in servers and AMD in browsers, because the last one loads async, but in the last times we can see more and more CommonJS in desktops. Anyway, now Javascript has his own kind of modules. And it's (it will be) very easy to implement:
+
+*Note: Please remember that in the browser we must use the boilerplate to support modules* 
+
+Ok, let's check the code:
+
+### index.html
+
+    <html>
+    <head>
+        <script src="bower_components/traceur/traceur.min.js"></script>
+        <script src="bower_components/es6-module-loader/dist/es6-module-loader-dev.js"></script>
+    </head>
+    
+    <body>
+    
+        <script>
+            System.import("js/base.js")
+        </script>
+    
+    </body>
+    </html>
+    
+### js/base.js
+    
+    console.log("Enter to the matrix!");
+    
+When we load the page, we will see:
+
+    Enter to the matrix!
+    
+Ok, so, what have we done here. Let's check the code     
+    
+First we load the libraries we need to support modules in browsers:
+    
+        <script src="bower_components/traceur/traceur.min.js"></script>
+        <script src="bower_components/es6-module-loader/dist/es6-module-loader-dev.js"></script>
+
+And then we load the module    
+
+    System.import("js/base.js")
+    
+The module shows a console output, so that's we are getting.
+    
+Ok, now imagine we change the module:
+    
+### js/base.js
+    var value = 99;
+    
+And now we want to use this `value` in our main page.
+
+### index.html
+   
+    <script>
+        System.import("js/base.js")
+        console.log(value);
+    </script>
+
+What do you think we get in execution?
+ 
+    Uncaught ReferenceError: value is not defined(anonymous function) @ (index):11
+    99
+    
+Interesting! We get an error because value is not defined. And after that, we show the module console. This is a very important part of modules: we need to declare what the module need to export. Let's do some changes to extend our functionality:
+
+### js/base.js
+    import { whereAmI } from 'js/module_values.js';
+    console.log(whereAmI);
+
+### js/module_values.js
+    export let whereAmI = 'In the matrix'
+
+Returns
+    
+     In the matrix   
+    
+Ooook, let's explain it. First I have changed the base.js file by using the ES6 nomenclature. I'm importing the `module_values` module. This module only exports one variable: `whereAmI`. This variable is imported in `base.js` and then exposed in our console. If you have some doubts about the structure, please check [the link to this example](https://github.com/LudoBermejo/es6-boilerplate/tree/thirdExample).
+  
+We can export all the variables we want, like:
+
+### js/module_values.js
+    export let whereAmI = 'In the matrix';
+    export let giveMeAName = 'Morpheus';
+  
+### js/base.js
+    import { whereAmI, giveMeAName } from 'js/module_values.js';
+    var message = `I'm ${giveMeAName} and I'm ${whereAmI}`;
+    console.log(message);
+    
+Will return
+    
+    I'm Morpheus and I'm In the matrix
+
+We can change the name of the variables if we want:
+
+### js/base.js
+    import { whereAmI as place, giveMeAName as me} from 'js/module_values.js';
+    var message = `I'm ${me} and I'm ${place}`;
+    console.log(message);
+
+Will return
+
+    I'm Morpheus and I'm In the matrix
+
+We can even use a `default` value, just like this:
+  
+
+### js/module_values.js
+     let myName = 'Morpheus';
+     export default myName;
+   
+### js/base.js
+     import myName from 'js/module_values.js';
+     var message = `I'm ${myName}`;
+     console.log(message);
+
+Will return
+
+    I'm Morpheus
+    
+We can even combine both things. It's weird but possible:
+
+### js/module_values.js
+    export let whereAmI = 'In the matrix';
+    let giveMeAName = 'Morpheus';
+    export default giveMeAName;   
+
+### js/base.js
+    import { default as me} from 'js/module_values.js';
+    var message = `I'm ${me}`;
+    console.log(message);
+    
+It could be interesting if we load the module in different environments.
+
+Now another one, interesting too:
+
+### js/module_values.js
+    let whereAmI = 'In the matrix';
+    let giveMeAName = 'Morpheus';
+    export {
+        whereAmI,
+        giveMeAName
+    }
+
+### js/base.js
+    import * as data from 'js/module_values.js';
+    var message = `I'm ${data.giveMeAName} and I'm ${data.whereAmI}`;
+    console.log(message);
+
+In this way you can export all the info and you will retrieve it in an object.
