@@ -5,7 +5,7 @@ date:   2016-04-18 10:30:00
 author: Ludo Bermejo
 categories: ES2015 
 tags:	es2015
-cover:  "assets/rest_and_spread.jpg"
+cover:  "assets/modules1.jpg"
 ---
 
 Ok, now that we have our boilerplate (see our [previous post](http://dev.ludobermejo.es/es2015/2016/04/17/traceur-module-loader.html), we can start working with `Modules`. But first is first: what is a `Module` in ES6? Ok, we use modules to cut our code into chunks that make sense together. Think of different libraries, like jquery or google maps. We load those libraries with `script` tags and we use them. Think of modules in a similar way, but for the same app (your app).
