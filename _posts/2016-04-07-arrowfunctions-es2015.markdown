@@ -59,13 +59,13 @@ This code will return:
 
 Let's try to convert it to arrow function:
 
-    var takeAPill = pill => pill=="Blue"?"Continue with your live, Neo":"Become the chosen one";
+    var takeAPill = pill => pill=="Blue"?"Continue with your live":"Become the chosen one";
     console.log(takeAPill("Blue"));
     console.log(takeAPill("Red"));
         
 And see the result:
     
-    Continue with your live, Neo
+    Continue with your live
     Become the chosen one
 
 Ok, what the f*uck happened with the parenthesis of the previous case? Well, I cheated: if you have only a parameter you don't need the parenthesis. Less code in the same space. 
@@ -84,7 +84,7 @@ It will show
     
 Now, how can we do it in an arrow function? Let's see it
      
-    var makeMeAJaeger = ( name, pilot1, pilot2) => "I asm " + name + ", piloted by " + pilot1 + " & " + pilot2;
+    var makeMeAJaeger = ( n, p1, p2) => "I asm " + n + ", piloted by " + p1 + " & " + p2;
     console.log(makeMeAJaeger( "Gipsy Danger", "Mako Mori", "Yancy Becket"));     
 
 It will show 
@@ -177,7 +177,7 @@ Now, what can we do with arrow functions?
     
         var neoDecision = {
             decision: "",
-            takeAPill: pill => pill=="Blue"?"Continue with your live, Neo":"Become the chosen one",
+            takeAPill: pill => pill=="Blue"?"Continue with your live":"Become the chosen one",
             init: function() {
                 document.getElementById("BluePill").addEventListener('click', () => {
                     console.log(this.takeAPill("Blue"));
