@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Modules II: Functions"
-date:   2016-04-18 10:30:00
+date:   2016-05-03 10:30:00
 author: Ludo Bermejo
 categories: ES2015 
 tags:	es2015
