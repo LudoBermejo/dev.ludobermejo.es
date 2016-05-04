@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Modules (I)"
+title:  "Modules I: Variables"
 date:   2016-04-18 10:30:00
 author: Ludo Bermejo
 categories: ES2015 
