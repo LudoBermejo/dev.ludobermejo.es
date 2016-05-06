@@ -5,7 +5,7 @@ date:   2016-05-06 9:30:00
 author: Ludo Bermejo
 categories: ES2015 
 tags:	es2015
-cover:  "assets/modules1.jpg"
+cover:  "assets/classes.jpg"
 ---
 
 Classes in Javascript. Possibly the most controversial feature of Ecmascript 6. As someone say to me: "just syntactic sugar for making Java developers feel important when they deal with javascript". Now, is that true? We have a full new syntax. Does it make something different?
