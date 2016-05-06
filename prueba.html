@@ -2,24 +2,35 @@
 <body>
 
 <script>
-    let redDragonPowers =
-    {
-        'BreathWeapon': 'A red dragon has one type of breath weapon, a cone of fire.',
-        'LocateObject': 'A juvenile or older red dragon can use this ability as the spell of the same name, once per day per age category.',
-        'SpellLikeAbilities': '3/day suggestion (old or older); 1/day find the path (ancient or older), discern location (great wyrm).',
-        'Skills': 'Appraise, Bluff, and Jump are considered class skills for red dragons.'
+
+    class DefaultDungeonsAndDragonsHero {
+        doBasicAttack(attack = "Nothing") {
+            console.log(new.target);
+            if(new.target)
+                return new.target.getBasicAttack() || attack
+            else return attack;
+        }
+
     }
 
-    let principalWeapon, customPowers;
+    class WarriorHero extends DefaultDungeonsAndDragonsHero {
+        static basicAttack() {
+            return "Hack and Slash!";
+        }
+    }
 
-    (
-            { BreathWeapon: principalWeapon , SpellLikeAbilities: customPowers } = redDragonPowers
-    );
+    let normalHero = new WarriorHero("Normal hero");
 
-    console.log(`The breath weapon description is ${principalWeapon}`);
-    console.log(`The skills are ${customPowers}`);
+    console.log(normalHero.doBasicAttack());
+
+    let warriorHero = new WarriorHero("Mighty warrior. Kind of");
+
+    console.log(warriorHero.doBasicAttack());
+
+
+
+
 </script>
-
 
 </body>
 

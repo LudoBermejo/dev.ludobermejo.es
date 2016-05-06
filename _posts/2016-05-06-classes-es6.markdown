@@ -1,0 +1,224 @@
+---
+layout: post
+title:  "Classes in ES6"
+date:   2016-05-06 9:30:00
+author: Ludo Bermejo
+categories: ES2015 
+tags:	es2015
+cover:  "assets/modules1.jpg"
+---
+
+Classes in Javascript. Possibly the most controversial feature of Ecmascript 6. As someone say to me: "just syntactic sugar for making Java developers feel important when they deal with javascript". Now, is that true? We have a full new syntax. Does it make something different?
+
+Short answer: it doesn't seem to.
+
+Long answer: but it can clarify the code. Let's see an example:
+
+    class WhatsBehindTheDoor {
+
+    }
+
+    console.log(typeof(WhatsBehindTheDoor));
+
+It will return
+
+    function
+    
+So forget about classes, objects and other stuff. Classes are functions. Period. But they have some useful shortcuts. Let's see a full example:
+
+    class WhatsBehindTheDoor {
+
+        lookThroughPeepHole() {
+            return "It's dark and full of terrors";
+        }
+
+    }
+
+    let letsSee = new WhatsBehindTheDoor();
+    console.log(letsSee.lookThroughPeepHole());
+    
+It will return
+    
+    It's dark and full of terrors
+    
+But, now. What's this lookThroughPeepHole method? I mean, if the class is a function... what's the methods? Let's see it:
+
+    class WhatsBehindTheDoor {
+
+        lookThroughPeepHole() {
+            return "It's dark and full of terrors";
+        }
+
+    }
+
+    let letsSee = new WhatsBehindTheDoor();
+    console.log(typeof letsSee.lookThroughPeepHole);
+    console.log(letsSee.lookThroughPeepHole == WhatsBehindTheDoor.prototype.lookThroughPeepHole);
+    
+It will return
+    
+    function
+    true
+    
+Ok, so the methods are functions (logically) and they are prototyped into the object. So you can forget the prototype if you need to do it. 
+    
+But now, if everything's the same, what's the utility of this class syntax? Well, for me it is a kind of shortcut. Let's see this:
+    
+    class WhatsBehindTheDoor {
+        constructor(answer = "Nothing") {
+            this.answerAboutPeepHole = answer;
+        }
+    
+        lookThroughPeepHole() {
+            return this.answerAboutPeepHole;
+        }
+    }
+    
+    let letsSeeNothing = new WhatsBehindTheDoor();
+    console.log(letsSeeNothing.lookThroughPeepHole());
+    
+    let letsSee = new WhatsBehindTheDoor("It's dark and full of terrors");
+    console.log(letsSee.lookThroughPeepHole());
+
+It will return
+
+    Nothing
+    It's dark and full of terrors
+
+Now there are interesting things in this code. First is the `constructor`. When you create an object with this class, this will be the first function executed. We can use this function to initialize objects. As you can see, I have defined a property by using `this`. And that is a way we can describe properties, by using the `this` operator. 
+
+Not bad, right? Maybe a little strange, but I think it is clear how to use constructors and properties. 
+    
+Now, what's about inheritance? How can we use it with this new classes? Let's see an example:
+
+    class DefaultDungeonsAndDragonsHero {
+        constructor(name) {
+            this.name = name;
+            this.stats = {
+                strength: 10,
+                dexterity: 10,
+                constitution: 10,
+                intelligence: 10,
+                wisdom: 10,
+                charisma: 10
+            }
+        }
+
+        showMeTheHero() {
+            console.log("My hero " + this.name);
+            for(let i in this.stats) {
+                console.log(i + ":" + this.stats[i]);
+            }
+        }
+    }
+
+    let defaultHero = new DefaultDungeonsAndDragonsHero();
+    defaultHero.showMeTheHero();
+    
+Ok, this will return:
+    
+    My hero Generic hero
+    strength:10
+    dexterity:10
+    constitution:10
+    intelligence:10
+    wisdom:10
+    charisma:10
+    
+Now let's create a subclass of this:
+
+    let defaultHero = new DefaultDungeonsAndDragonsHero("Generic hero");
+    defaultHero.showMeTheHero();
+
+    class WarriorHero extends DefaultDungeonsAndDragonsHero {
+
+        constructor(name) {
+            super(name);
+            this.stats.intelligence-=2;
+            this.stats.wisdom-=2;
+            this.stats.strength+=2;
+            this.stats.constitution+=2;
+        }
+    }
+
+    let warriorHero = new WarriorHero("Mighty warrior. Kind of");
+    warriorHero.showMeTheHero();
+    
+This chunk will return:
+
+    My hero Mighty warrior. Kind of
+    strength:12
+    dexterity:10
+    constitution:12
+    intelligence:8
+    wisdom:8
+    charisma:10
+    
+Ok, what I did here?
+    
+First, I `extend` the DefaultDungeonsAndDragonsHero. I have another constructor for this class, that first call the parent constructor with the `super` operator. I'm sending the name to parent. Then, I modify the basic values, defined in the parent class. And now I have a new subclass.
+
+Easy enough, and clear, IMMO.
+
+Now, for something different... let's see `static`.
+
+    class DefaultDungeonsAndDragonsHero {
+        constructor(name) {
+            this.name = name;
+            this.stats = {
+                strength: 10,
+                dexterity: 10,
+                constitution: 10,
+                intelligence: 10,
+                wisdom: 10,
+                charisma: 10
+            }
+        }
+
+        static giveUsTheSpeech() {
+            return "Between the time when the oceans drank Atlantis and the rise of the sons of Aryas," +
+                    " there was an age undreamed of. And unto this, Conan, destined to wear the jeweled crown " +
+                    "of Aquilonia upon a troubled brow. It is I, his chronicler, who alone can tell thee of his" +
+                    " saga. Let me tell you of the days of high adventure!";
+        }
+
+        showMeTheHero() {
+            console.log("My hero " + this.name);
+            for(let i in this.stats) {
+                console.log(i + ":" + this.stats[i]);
+            }
+        }
+    }
+
+    console.log(DefaultDungeonsAndDragonsHero.giveUsTheSpeech());
+    
+It will return
+    
+    Between the time when the oceans drank Atlantis and the rise of the sons of Aryas, there was an age undreamed of. And unto this, Conan, destined to wear the jeweled crown of Aquilonia upon a troubled brow. It is I, his chronicler, who alone can tell thee of his saga. Let me tell you of the days of high adventure!
+    
+Yeah, as you imagine, static will create static methods. Sadly, we can't do the same with variables. This is the only way I found to do it:
+    
+    class DefaultDungeonsAndDragonsHero {
+        static showMeTheHero() {
+            console.log("My hero " + this.myName);
+        }
+    }
+
+    DefaultDungeonsAndDragonsHero.myName = "Static hero";
+    DefaultDungeonsAndDragonsHero.showMeTheHero();
+    
+It will return
+    
+    My hero Static hero
+    
+So yes, you need to declare the static variable outside the class. Bad thoughts about this :(
+  
+Ok, we can talk more about classes but I think it's enought for one day. Let's see the...
+  
+# CONCLUSIONS
+  
+Classes are syntactic sugar, yes, but it could be useful to clarify methodology. It needs more work (static variables, better structure) but at the end, you can choose or not to use them. I will use them because I think they are more clear that prototypes, knowing that they are less powerful :)  
+  
+    
+
+    
