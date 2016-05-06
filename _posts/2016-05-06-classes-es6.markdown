@@ -53,7 +53,11 @@ But, now. What's this lookThroughPeepHole method? I mean, if the class is a func
 
     let letsSee = new WhatsBehindTheDoor();
     console.log(typeof letsSee.lookThroughPeepHole);
-    console.log(letsSee.lookThroughPeepHole == WhatsBehindTheDoor.prototype.lookThroughPeepHole);
+    console.log(
+        letsSee.lookThroughPeepHole 
+        == 
+        WhatsBehindTheDoor.prototype.lookThroughPeepHole
+    );
     
 It will return
     
@@ -176,9 +180,12 @@ Now, for something different... let's see `static`.
         }
 
         static giveUsTheSpeech() {
-            return "Between the time when the oceans drank Atlantis and the rise of the sons of Aryas," +
-                    " there was an age undreamed of. And unto this, Conan, destined to wear the jeweled crown " +
-                    "of Aquilonia upon a troubled brow. It is I, his chronicler, who alone can tell thee of his" +
+            return "Between the time when the oceans drank Atlantis " +
+                    "and the rise of the sons of Aryas," +
+                    " there was an age undreamed of. And unto this, " +
+                    "Conan, destined to wear the jeweled crown " +
+                    "of Aquilonia upon a troubled brow. It is I, his " +
+                    "chronicler, who alone can tell thee of his" +
                     " saga. Let me tell you of the days of high adventure!";
         }
 

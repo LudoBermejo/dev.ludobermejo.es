@@ -4,28 +4,37 @@
 <script>
 
     class DefaultDungeonsAndDragonsHero {
-        doBasicAttack(attack = "Nothing") {
-            console.log(new.target);
-            if(new.target)
-                return new.target.getBasicAttack() || attack
-            else return attack;
+        constructor(name) {
+            this.name = name;
+            this.stats = {
+                strength: 10,
+                dexterity: 10,
+                constitution: 10,
+                intelligence: 10,
+                wisdom: 10,
+                charisma: 10
+            }
         }
 
-    }
+        static giveUsTheSpeech() {
+            return "Between the time when the oceans drank Atlantis " +
+                    "and the rise of the sons of Aryas," +
+                    " there was an age undreamed of. And unto this, " +
+                    "Conan, destined to wear the jeweled crown " +
+                    "of Aquilonia upon a troubled brow. It is I, his " +
+                    "chronicler, who alone can tell thee of his" +
+                    " saga. Let me tell you of the days of high adventure!";
+        }
 
-    class WarriorHero extends DefaultDungeonsAndDragonsHero {
-        static basicAttack() {
-            return "Hack and Slash!";
+        showMeTheHero() {
+            console.log("My hero " + this.name);
+            for(let i in this.stats) {
+                console.log(i + ":" + this.stats[i]);
+            }
         }
     }
 
-    let normalHero = new WarriorHero("Normal hero");
-
-    console.log(normalHero.doBasicAttack());
-
-    let warriorHero = new WarriorHero("Mighty warrior. Kind of");
-
-    console.log(warriorHero.doBasicAttack());
+    console.log(DefaultDungeonsAndDragonsHero.giveUsTheSpeech());
 
 
 
