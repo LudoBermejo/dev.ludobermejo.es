@@ -201,7 +201,12 @@ Now, for something different... let's see `static`.
     
 It will return
     
-    Between the time when the oceans drank Atlantis and the rise of the sons of Aryas, there was an age undreamed of. And unto this, Conan, destined to wear the jeweled crown of Aquilonia upon a troubled brow. It is I, his chronicler, who alone can tell thee of his saga. Let me tell you of the days of high adventure!
+    Between the time when the oceans drank Atlantis 
+    and the rise of the sons of Aryas, there was an age undreamed of. 
+    And unto this, Conan, destined to wear the jeweled crown of 
+    Aquilonia upon a troubled brow. It is I, his chronicler,
+    who alone can tell thee of his saga. Let me tell you of 
+    the days of high adventure!
     
 Yeah, as you imagine, static will create static methods. Sadly, we can't do the same with variables. This is the only way I found to do it:
     
