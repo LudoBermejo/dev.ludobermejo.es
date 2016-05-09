@@ -1,0 +1,139 @@
+---
+layout: post
+title:  "Symbols in ES6"
+date:   2016-05-09 9:30:00
+author: Ludo Bermejo
+categories: ES2015 
+tags:	es2015
+cover:  "assets/classes.jpg"
+---
+
+Symbols are a new concept in ES6. `Symbols` are used to create unique identifiers. Curious thing about them: you can't get the value of this identifiers. You can't inspect them; the only think you can know is that they are unique.
+ 
+Let's see an example:
+ 
+    let deathSymbol = Symbol('Ank');
+    console.log(deathSymbol);
+    console.log(typeof deathSymbol);
+    console.log(deathSymbol.toString());
+    
+It will return
+    
+    Symbol(Ank)
+    symbol
+    Symbol(Ank)
+    
+No number, no alphanumerical data. Just the definition of the symbol. 
+
+But how can we be sure that two symbols are different? Let's check another example:
+
+    let dreamSymbol = Symbol('Eternals');
+    let desireSymbol = Symbol('Eternals');
+    console.log(dreamSymbol == desireSymbol);
+    console.log(dreamSymbol === desireSymbol);
+    
+This code will return
+    
+    false
+    false
+    
+So yes, there are different and unique.
+    
+But, how can then we search for symbols. If everyone's unique... is there no way to search for them?
+    
+Covered! We need to use `Symbol.for`
+
+    let dreamSymbol = Symbol.for('Eternals');
+    let desireSymbol = Symbol.for('Eternals');
+    console.log(dreamSymbol == desireSymbol);
+    console.log(dreamSymbol === desireSymbol);
+    
+This will return:
+    
+    true
+    true
+    
+What "for" do, in the first statement, is to create the symbol. The second statement will look for the value created to return it to the variable.
+    
+And now... how can we know what type of symbol is a variable about? For example:
+    
+    let wowCharacters = [];
+        for(let i=0;i<=10;i++) {
+            var rnd = Math.floor(Math.random()*3);
+            switch(rnd) {
+                case 0:
+                    wowCharacters.push(Symbol("Mage"));
+                    break;
+                case 1:
+                    wowCharacters.push(Symbol("Warrior"));
+                    break;
+                case 2:
+                    wowCharacters.push(Symbol("Rogue"));
+                    break;
+            }
+        }
+    
+        console.log(wowCharacters);
+
+Now, how can we know what's the original value of wowCharacters four position? Well, we must use keyFor
+        
+    let fourCharacter = wowCharacters[3];
+    console.log(fourCharacter);
+    console.log(Symbol.keyFor(fourCharacter));
+
+This code will return
+ 
+    Symbol(Mage)
+    Mage
+    
+But remember: you can only get this key for the Symbols declared with `for` statement.
+    
+Now we can use Symbols in creative ways, like for example:
+     
+     let marvelHero = {
+        name: 'Spiderman',
+        [Symbol.for('SecretName')]: 'Peter Parker'
+     }
+     
+     console.log(marvelHero);
+     
+It will return 
+     
+     Object {name: "Spiderman", Symbol(SecretName): "Peter Parker"}
+     
+So we can use symbols to declare properties. And why we will use this. Well, you might want to "hide" this properties. If you use get the own properties of the object:
+
+    console.log(Object.getOwnPropertyNames(marvelHero));
+     
+You will only this as properties
+     
+     ["name"]
+     
+If you want to get the symbols, you need to use
+
+     console.log(Object.getOwnPropertySymbols(marvelHero));
+
+Then, you only get this:
+
+    [Symbol(SecretName)]
+    
+The symbol. We can do complex things with it:
+    
+     let marvelHero = {
+        name: 'Spiderman',
+        powers: ['Strenght', 'Speed', 'Agility', 'Spider sense'],
+        [Symbol.for('SecretName')]: 'Peter Parker',
+        [Symbol.for('Family')]: ['Aunt may', 'Mary Jane']
+    }
+    
+    console.log(Object.getOwnPropertyNames(marvelHero));
+    console.log(Object.getOwnPropertySymbols(marvelHero));
+    
+This will return
+    
+    ["name", "powers"]
+    [Symbol(SecretName), Symbol(Family)]
+
+# CONCLUSION
+
+At least we can use something different that the usual UUIDs or autonumeric fields. Ludo approves that! :D

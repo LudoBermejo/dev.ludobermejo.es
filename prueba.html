@@ -3,42 +3,15 @@
 
 <script>
 
-    class DefaultDungeonsAndDragonsHero {
-        constructor(name) {
-            this.name = name;
-            this.stats = {
-                strength: 10,
-                dexterity: 10,
-                constitution: 10,
-                intelligence: 10,
-                wisdom: 10,
-                charisma: 10
-            }
-        }
-
-        static giveUsTheSpeech() {
-            return "Between the time when the oceans drank Atlantis " +
-                    "and the rise of the sons of Aryas," +
-                    " there was an age undreamed of. And unto this, " +
-                    "Conan, destined to wear the jeweled crown " +
-                    "of Aquilonia upon a troubled brow. It is I, his " +
-                    "chronicler, who alone can tell thee of his" +
-                    " saga. Let me tell you of the days of high adventure!";
-        }
-
-        showMeTheHero() {
-            console.log("My hero " + this.name);
-            for(let i in this.stats) {
-                console.log(i + ":" + this.stats[i]);
-            }
-        }
+    let marvelHero = {
+        name: 'Spiderman',
+        powers: ['Strenght', 'Speed', 'Agility', 'Spider sense'],
+        [Symbol.for('SecretName')]: 'Peter Parker',
+        [Symbol.for('Family')]: ['Aunt may', 'Mary Jane']
     }
 
-    console.log(DefaultDungeonsAndDragonsHero.giveUsTheSpeech());
-
-
-
-
+    console.log(Object.getOwnPropertyNames(marvelHero));
+    console.log(Object.getOwnPropertySymbols(marvelHero));
 </script>
 
 </body>
