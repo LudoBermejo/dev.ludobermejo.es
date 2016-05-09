@@ -5,7 +5,7 @@ date:   2016-05-09 9:30:00
 author: Ludo Bermejo
 categories: ES2015 
 tags:	es2015
-cover:  "assets/classes.jpg"
+cover:  "assets/symbols.jpg"
 ---
 
 Symbols are a new concept in ES6. `Symbols` are used to create unique identifiers. Curious thing about them: you can't get the value of this identifiers. You can't inspect them; the only think you can know is that they are unique.
