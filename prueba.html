@@ -3,15 +3,20 @@
 
 <script>
 
-    let marvelHero = {
-        name: 'Spiderman',
-        powers: ['Strenght', 'Speed', 'Agility', 'Spider sense'],
-        [Symbol.for('SecretName')]: 'Peter Parker',
-        [Symbol.for('Family')]: ['Aunt may', 'Mary Jane']
+    let redDragonPowers =
+    {
+        'BreathWeapon': 'A red dragon has one type of breath weapon, a cone of fire.',
+        'LocateObject': 'A juvenile or older red dragon can use this ability ' +
+                        'as the spell of the same name, once per day per age category.',
+        'SpellLikeAbilities': '3/day—suggestion (old or older); 1/day—find the ' +
+                                'path (ancient or older), discern location (great wyrm).',
+        'Skills': 'Appraise, Bluff, and Jump are considered class skills for red dragons.'
     }
 
-    console.log(Object.getOwnPropertyNames(marvelHero));
-    console.log(Object.getOwnPropertySymbols(marvelHero));
+    let { BreathWeapon, Skills } = redDragonPowers;
+
+    console.log(`The breath weapon description is ${BreathWeapon}`);
+    console.log(`The skills are ${Skills}`);
 </script>
 
 </body>

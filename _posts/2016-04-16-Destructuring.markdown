@@ -112,22 +112,25 @@ Will return:
 
 `Objects` works like arrays, but with small changes. Let's see them with examples
 
-    let redDragonPowers =
-    {
-        'BreathWeapon': 'A red dragon has one type of breath weapon, a cone of fire.',
-        'LocateObject': 'A juvenile or older red dragon can use this ability as the spell of the same name, once per day per age category.',
-        'SpellLikeAbilities': '3/day—suggestion (old or older); 1/day—find the path (ancient or older), discern location (great wyrm).',
-        'Skills': 'Appraise, Bluff, and Jump are considered class skills for red dragons.'
-    }
-
-    let { BreathWeapon, Skills } = redDragonPowers;
-
-    console.log(`The breath weapon description is ${BreathWeapon}`);
-    console.log(`The skills are ${Skills}`);
+     let redDragonPowers =
+        {
+            'BreathWeapon': 'A red dragon has one type of breath weapon, a cone of fire.',
+            'LocateObject': 'A juvenile or older red dragon can use this ability ' +
+                            'as the spell of the same name, once per day per age category.',
+            'SpellLikeAbilities': '3/day—suggestion (old or older); 1/day—find the ' +
+                                    'path (ancient or older), discern location (great wyrm).',
+            'Skills': 'Appraise, Bluff, and Jump are considered class skills for red dragons.'
+        }
+    
+        let { BreathWeapon, Skills } = redDragonPowers;
+    
+        console.log(`The breath weapon description is ${BreathWeapon}`);
+        console.log(`The skills are ${Skills}`);
 
 This will return:
 
-    The breath weapon description is A red dragon has one type of breath weapon, a cone of fire.
+    The breath weapon description is 
+        A red dragon has one type of breath weapon, a cone of fire.
     The skills are Appraise, Bluff, and Jump are considered class skills for red dragons.
     
 As you can see, we can decide what properties we want to store. We don't need to use them all. Now let me show you another example:
@@ -135,34 +138,42 @@ As you can see, we can decide what properties we want to store. We don't need to
     let redDragonPowers =
     {
         'BreathWeapon': 'A red dragon has one type of breath weapon, a cone of fire.',
-        'LocateObject': 'A juvenile or older red dragon can use this ability as the spell of the same name, once per day per age category.',
-        'SpellLikeAbilities': '3/day suggestion (old or older); 1/day find the path (ancient or older), discern location (great wyrm).',
+        'LocateObject': 'A juvenile or older red dragon can use this ability ' +
+                        'as the spell of the same name, once per day per age category.',
+        'SpellLikeAbilities': '3/day—suggestion (old or older); 1/day—find the ' +
+                                'path (ancient or older), discern location (great wyrm).',
         'Skills': 'Appraise, Bluff, and Jump are considered class skills for red dragons.'
     }
 
-    let { BreathWeapon: principalWeapon , SpellLikeAbilities: customPowers } = redDragonPowers;
+    let { BreathWeapon: principalWeapon , 
+            SpellLikeAbilities: customPowers } = redDragonPowers;
 
     console.log(`The breath weapon description is ${principalWeapon}`);
     console.log(`The skills are ${customPowers}`);
     
 This will return:
     
-    The breath weapon description is A red dragon has one type of breath weapon, a cone of fire.
-    The skills are 3/day suggestion (old or older); 1/day find the path (ancient or older), discern location (great wyrm).
+    The breath weapon description is 
+        A red dragon has one type of breath weapon, a cone of fire.
+    The skills are 3/day suggestion (old or older); 
+        1/day find the path (ancient or older), discern location (great wyrm).
     
 And now, I show you one problem you maybe could have. Let's check this code:
 
     let redDragonPowers =
     {
         'BreathWeapon': 'A red dragon has one type of breath weapon, a cone of fire.',
-        'LocateObject': 'A juvenile or older red dragon can use this ability as the spell of the same name, once per day per age category.',
-        'SpellLikeAbilities': '3/day suggestion (old or older); 1/day find the path (ancient or older), discern location (great wyrm).',
+        'LocateObject': 'A juvenile or older red dragon can use this ability ' +
+                        'as the spell of the same name, once per day per age category.',
+        'SpellLikeAbilities': '3/day—suggestion (old or older); 1/day—find the ' +
+                                'path (ancient or older), discern location (great wyrm).',
         'Skills': 'Appraise, Bluff, and Jump are considered class skills for red dragons.'
     }
 
     let principalWeapon, customPowers;
 
-    { BreathWeapon: principalWeapon , SpellLikeAbilities: customPowers } = redDragonPowers;
+    { BreathWeapon: principalWeapon , 
+      SpellLikeAbilities: customPowers } = redDragonPowers;
 
     console.log(`The breath weapon description is ${principalWeapon}`);
     console.log(`The skills are ${customPowers}`);
@@ -179,15 +190,18 @@ So, how can I avoid this problem. Well, you will not like it:
     let redDragonPowers =
     {
         'BreathWeapon': 'A red dragon has one type of breath weapon, a cone of fire.',
-        'LocateObject': 'A juvenile or older red dragon can use this ability as the spell of the same name, once per day per age category.',
-        'SpellLikeAbilities': '3/day suggestion (old or older); 1/day find the path (ancient or older), discern location (great wyrm).',
+        'LocateObject': 'A juvenile or older red dragon can use this ability ' +
+                        'as the spell of the same name, once per day per age category.',
+        'SpellLikeAbilities': '3/day—suggestion (old or older); 1/day—find the ' +
+                                'path (ancient or older), discern location (great wyrm).',
         'Skills': 'Appraise, Bluff, and Jump are considered class skills for red dragons.'
     }
     
     let principalWeapon, customPowers;
     
     ( 
-        { BreathWeapon: principalWeapon , SpellLikeAbilities: customPowers } = redDragonPowers 
+        { BreathWeapon: principalWeapon , 
+            SpellLikeAbilities: customPowers } = redDragonPowers 
     );
     
     console.log(`The breath weapon description is ${principalWeapon}`);
