@@ -8,7 +8,7 @@ tags:	es2015
 cover:  "assets/destructuring.jpg"
 ---
 
-ES6 supports supports `destructuring`. With this feature we can extract values from data stored in arrays (including strings) and objects. 
+ES6 supports `destructuring`. With this feature we can extract values from data stored in arrays (including strings) and objects. 
 
 How can we do that? Simple enough:
 
