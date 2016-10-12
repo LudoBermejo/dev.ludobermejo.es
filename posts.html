@@ -1,27 +1,172 @@
----
-layout: page
-title: "Posts"
-permalink: /posts/
----
-
-{% for category in site.categories %}
-	{% capture cat %}{{ category | first }}{% endcapture %}
-	<h2>{{ cat | capitalize }}</h2>
-	{% for desc in site.descriptions %}
-		{% if desc.cat == cat %}
-			<p class="desc"><em>{{ desc.desc }}</em></p>
-		{% endif %}
-	{% endfor %}
-	<ul class="posts-list">
-	{% for post in site.categories[cat] %}
-		<li>
-			<strong>
-				<a href="{{ post.url | remove_first: '/' | prepend: site.baseurl }}">{{ post.title }}</a>
-			</strong>
-			<span class="post-date">- {{ post.date | date_to_long_string }}</span>
-		</li>
-	{% endfor %}
-	</ul>
-	{% if forloop.last == false %}<hr>{% endif %}
-{% endfor %}
-<br>
+<main id="main" class="main main--noFooter is-static">
+    <div id="gigya_layer">
+        <section class="gigya-screen" id="login-screen" data-width="auto">
+            <div class="container"><h1 class="h-section bg-2"><span>Identifiez-vous</span></h1>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+                        <form id="login-form" class="Form">
+                            <fieldset>
+                                <div class="Form-group"><label for="emailLogin"
+                                                               class="Form-label">Email/téléphone</label> <input
+                                        autofocus type="email" class="Form-input" name="loginID" id="emailLogin"
+                                        value="" tabindex="1" placeholder="nom@exemple.com / +966XXXXXXXX"/></div>
+                                <div class="Form-group"><label for="password" class="Form-label">Mot de passe</label>
+                                    <input type="password" class="Form-input" name="password" id="password" tabindex="2"
+                                           placeholder="Mot de passe"/>
+                                    <div class="Form-group hide" id="passwordIncorrect"><p class="Form-text">Identifiant
+                                        ou mot de passe incorrect</p></div>
+                                    <div class="Form-group hide" id="loginConectionError"><p class="Form-text">Nous
+                                        sommes désolés, une erreur est survenue. Merci de réessayer dans quelques
+                                        instants</p></div>
+                                    <a href="#" id="forgot-password-link" data-toggle="modal" class="Form-link">Mot de
+                                        passe oublié?</a></div>
+                                <div class="Form-group Form-group--buttons">
+                                    <button type="submit" id="ButtonLogin" class="Btn--primary Btn--block" disabled>
+                                        Identifiez-vous
+                                    </button>
+                                    <strong class="Btn-separator">ou</strong>
+                                    <button id="facebook-login" class="Btn--facebook Btn--icon Btn--block"
+                                            type="button"><span class="icon icon-facebook"></span> S'identifier avec
+                                        Facebook
+                                    </button>
+                                </div>
+                                <div class="Form-group">
+                                    <div class="Form-check"><input type="checkbox" name="remember" id="remember"
+                                                                   tabindex="3"> <label for="remember">Rester
+                                        connecté(e)</label></div>
+                                </div>
+                                <div class="Form-group"><p class="Form-text Form-text--secondary">Vous n'avez pas encore
+                                    de compte? <a href='/registration/userinfo' id='signup-link'><strong>Inscrivez-vous
+                                        sans plus attendre </strong></a></p></div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="facebook-account-not-found-modal" class="modal fade new-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header"><h4 class="modal-title">Rattacher les Comptes</h4>
+                        <button id="close-need-to-signup-modal" type="button" class="close-modal" data-dismiss="modal">
+                            <span class="icon icon-close"></span> <span class="sr-only">Fermer</span></button>
+                    </div>
+                    <div class="modal-body"><p>Ce compte Facebook n'existe pas dans notre système. Veuillez vous rendre
+                        sur la page <a href=</p></div>
+                    <div class="modal-footer">
+                        <button id="facebook-account-not-found-button" data-dismiss="modal" type="button"
+                                class="Btn--primary">OK
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="link-accounts-modal" class="modal fade new-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header"><h4 class="modal-title">Rattacher les Comptes</h4>
+                        <button id="close-link-accounts-modal" type="button" class="close-modal" data-dismiss="modal">
+                            <span class="icon icon-close"></span> <span class="sr-only">Fermer</span></button>
+                    </div>
+                    <form id="link-accounts-form" class="Form" autocomplete="off">
+                        <div class="modal-body">
+                            <fieldset class="Form-fieldset"><p class="Form-text"> Un compte STARZ Play avec cette
+                                adresse email existe déjà. Veuillez saisir le mot de passe de votre compte STARZ Play
+                                afin de rattacher les deux comptes. </p>
+                                <div class="Form-group"><label for="starz-account-password" class="Form-label">Mot de
+                                    passe de mon compte STARZ Play:</label> <input id="starz-account-password"
+                                                                                   name="starz-account-password"
+                                                                                   autofocus autocomplete="off"
+                                                                                   type="password" class="Form-input"
+                                                                                   placeholder="Mot de passe"/>
+                                    <div id="incorrect-password-error" class="error hidden">Mot de passe incorrect</div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="link-accounts-button" type="button" class="Btn--primary">Continuer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade new-modal" id="forgot-pass-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"><h4 class="modal-title">J'ai oublié mon mot de passe</h4>
+                    <button type="button" class="close-modal" data-dismiss="modal"><span class="icon icon-close"></span>
+                        <span class="sr-only">Fermer</span></button>
+                </div>
+                <form id="reset-password-form" class="Form">
+                    <div class="modal-body">
+                        <fieldset class="Form-fieldset"><p class="Form-text"> Veuillez saisir le numéro de téléphone ou
+                            l'email avec lequel vous avez créé votre compte afin de réinitialiser votre mot de passe</p>
+                            <div class="Form-group"><input type="email" class="Form-input" name="userIdentifier"
+                                                           id="userIdentifier"
+                                                           placeholder="Saisissez votre numéro de téléphone ou votre adresse email"/>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="reset-password-button" type="submit" class="Btn--primary">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="email-sent-modal" class="modal fade new-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"><h4 class="modal-title">J'ai oublié mon mot de passe</h4>
+                    <button type="button" class="close-modal" data-dismiss="modal"><span class="icon icon-close"></span>
+                        <span class="sr-only">Fermer</span></button>
+                </div>
+                <div class="modal-body text-center"><span class="icon icon-check icon-ok" aria-hidden="true"></span>
+                    <p class="Form-text--info"><strong>Merci. Vous avez dû recevoir dans votre Boite de Réception un
+                        lien pour réinitialiser votre mot de passe.<br/>Pour votre sécurité, ce lien expirera dans 24
+                        heures.</strong></p></div>
+            </div>
+        </div>
+    </div>
+    <div id="password-reset-mobile-modal" class="modal fade new-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"><h4 class="modal-title">J'ai oublié mon mot de passe</h4>
+                    <button type="button" class="close-modal" data-dismiss="modal"><span class="icon icon-close"></span>
+                        <span class="sr-only">Fermer</span></button>
+                </div>
+                <form id="new-password-form" class="Form">
+                    <div class="modal-body">
+                        <div class="Form-group"><label for="mobile-code" class="Form-label">Vérifier votre code</label>
+                            <p id="code-sent-to" class="Form-text"> Un code de confirmation terminant par '00' vous a
+                                été envoyé par sms.<br/>. Une fois ce code reçu, veuillez le saisir ci-dessous afin de
+                                réinitialiser votre mot de passe</p> <input type="text" class="Form-input"
+                                                                            name="mobile-code" id="mobile-code"
+                                                                            placeholder="Saisir votre code"/>
+                            <div id="new-password-error-438" class="new-password-error error hidden"> Le code de
+                                confirmation fourni n'est pas valide
+                            </div>
+                        </div>
+                        <a id="forgot-password-resend-sms" class="resend-sms-link">Renvoyer le code</a>
+                        <div class="Form-group"><label for="new-password" class="Form-label">Définir un nouveau mot de
+                            passe</label>
+                            <p class="Form-text"> Veuillez vous assurer que les mots de passe choisis pour l'ensemble de
+                                vos comptes sont forts</p> <input type="password" class="Form-input" name="new-password"
+                                                                  id="new-password"
+                                                                  placeholder="Saisir votre nouveau mot de passe"/>
+                        </div>
+                        <div class="Form-group"><input type="password" class="Form-input" name="repeat-new-password"
+                                                       id="repeat-new-password"
+                                                       placeholder="Saisir votre nouveau mot de passe"/></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="submit-new-password" class="Btn--primary" type="button" data-dismiss="modal">
+                            Envoyer
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div></main>
