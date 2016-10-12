@@ -6,7 +6,7 @@ author: Ludo Bermejo
 categories: theorical 
 tags:	theorical
 cover:  "assets/get_side_job.jpg"
----------------------------------
+---
 
 *Wow, five months since my last update. Ok, a short explanation. First I went to a new position in my old company (kind of Devops) and then I left Starz to play a new song for a new company (say hi to [TheMotion](http://www.themotion.com)). Now it's all about __Docker__, __Python__ and some __EmberJS__. Sorry the wait, but I needed to learn a lot of things in a short time. Let's hope it will get better the next weeks :)*
 
