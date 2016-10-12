@@ -34,7 +34,7 @@ So, please, just
     
 ### _Get a side job._
     
-and you will understand. I promised.
+and you will understand this. I promised.
 
 
 
